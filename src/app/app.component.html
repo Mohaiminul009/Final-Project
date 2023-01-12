@@ -1,104 +1,31 @@
-<section>
-  <div class="container-fluid">
-    <div class="row" id="nav_bar">
-      <div class="col-md-3"></div>
-  
-      <div class="col-md-5">
-        <nav class="nav">
-          <a class="nav-link text-light active" aria-current="page" href="#">Home</a>
-          <a class="nav-link text-light" routerLink="">Classroom</a>
-          <a class="nav-link text-light" routerLink="">Course</a>
-          <a class="nav-link text-light" routerLink="">Blog</a>
+<div class="container-fluid" style="background-image: linear-gradient(to right, #141E30, #243B55); height: auto;">
+  <div class="row" id="nav_bar">
+    <div class="col-md-4" style=" padding-bottom: 5px;">
+      <div class="row pb-3" style="padding-top: 5px;">
+        <div class="col-md-12">
+          <a class="text-info" href="" id="logo"><img src="../assets/images/logo.png" alt="" style="height: 60px; width: 60px;">ePathshala</a> 
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-5" style=" padding-top: 12px;">
+      <nav class="nav">
+        <a class="nav-link text-light active" aria-current="page" href="#">Home</a>
+        <a class="nav-link text-light" routerLink="">Classroom</a>
+        <a class="nav-link text-light" routerLink="">Course</a>
+        <a class="nav-link text-light" routerLink="">Blog</a>
+        <a class="nav-link text-light" routerLink="">About Us</a>
+    </nav>
+    </div>
+
+    <div class="col-md-3" style=" padding-top: 12px;">
+      <nav class="nav d-flex flex-row-reverse">
+        <a class="nav-link text-light" routerLink=""><i class="fa-duotone fa-user"></i></a>
+        <a class="nav-link text-light" routerLink="">LogIn</a>
+        <a class="nav-link text-light" routerLink=""><img src="../assets/images/search.png" alt="" id="src_img"></a>
       </nav>
-      </div>
-  
-      <div class="col-md-4">
-        <nav class="nav d-flex flex-row-reverse">
-          <a class="nav-link text-light" routerLink=""><i class="fa-duotone fa-user"></i></a>
-          <a class="nav-link text-light" routerLink="">Login/Register</a>
-        </nav>
-      </div>
     </div>
   </div>
+</div>
 
-
-  <div class="jumbotron jumbotron-fluid bg-dark">
-    <div class="jumbotron-background">
-      <img src="../assets/images/Wave-Wallpapers-1.jpg" class="blur ">
-    </div>
-  
-    <div class="container text-white">
-      <h1 class="display-4">Hello, world!</h1>
-      <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-      <hr class="my-4">
-      <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-    </div>
-  </div>
-  
-  <!-- <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-12 ">
-        <div class="jumbotron bg-image">
-          <h1>Hello, world!</h1>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam, a rem distinctio voluptas necessitatibus atque. Laudantium ad laboriosam beatae consectetur, provident aliquid, aperiam ipsam neque quas dolor voluptate, nemo dolorum?</p>
-          <p><a class="btn btn-primary" href="#" role="button">Learn more</a></p>
-        </div>
-      </div>
-    </div>
-  </div> -->
-  
-  <div class="container" style="font-size: 12px;">
-    <div class="row">
-      <div class="col-md-3 d-flex justify-content-center">
-        <div class="card" style="width: 15rem;">
-          <img class="card-img-top" src="../assets/images/wallpaper.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h6 class="card-title">Card title</h6>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary" style="font-size: 12px;">Go somewhere</a>
-          </div>
-        </div>
-      </div>
-  
-      <div class="col-md-3 d-flex justify-content-center">
-        <div class="card" style="width: 15rem;">
-          <img class="card-img-top" src="../assets/images/wallpaper.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h6 class="card-title">Card title</h6>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary" style="font-size: 12px;">Go somewhere</a>
-          </div>
-        </div>
-      </div>
-  
-      <div class="col-md-3 d-flex justify-content-center">
-        <div class="card" style="width: 15rem;">
-          <img class="card-img-top" src="../assets/images/wallpaper.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h6 class="card-title">Card title</h6>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary" style="font-size: 12px;">Go somewhere</a>
-          </div>
-        </div>
-      </div>
-  
-      <div class="col-md-3 d-flex justify-content-center">
-        <div class="card" style="width: 15rem;">
-          <img class="card-img-top" src="../assets/images/wallpaper.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h6 class="card-title">Card title</h6>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary" style="font-size: 12px;">Go somewhere</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-<script>
-  $(function () { objectFitImages() });
-</script>
+<app-home></app-home>
