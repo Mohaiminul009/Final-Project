@@ -22,10 +22,18 @@
       <nav class="nav d-flex flex-row-reverse">
         <a class="nav-link text-light" routerLink=""><i class="fa-duotone fa-user"></i></a>
         <a class="nav-link text-light" routerLink="">LogIn</a>
-        <a class="nav-link text-light" routerLink=""><img src="../assets/images/search.png" alt="" id="src_img"></a>
+        <button class="nav-link text-light" routerLink="" id="myBtn"><img src="../assets/images/search.png" alt="" id="src_img"></button>
       </nav>
     </div>
   </div>
+</div>
+
+<!-- <<<<< search >>>>> -->
+<div class="container-fluid" id="src">
+    <form action="https://www.google.com/search" method="get" class="search-bar">
+      <input type="text" placeholder="Google Search" name="q">
+      <button type="submit"><img src="../../assets/images/search.png" alt=""></button>
+    </form>
 </div>
 
 <app-home></app-home>
