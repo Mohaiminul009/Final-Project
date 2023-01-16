@@ -1,0 +1,16 @@
+#sidebar{
+    background: rgba(0,8,51,0.9);
+}
+.nav{
+    position: fixed;
+}
+.nav-item{
+    list-style: none;  
+}
+.nav-item a{
+    color: aliceblue;
+    text-decoration: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 75%;
+}
