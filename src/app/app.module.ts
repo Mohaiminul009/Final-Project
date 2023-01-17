@@ -11,6 +11,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { CourseDetailsComponent } from './course-details/course-details.component';
+import { ADashboardComponent } from './a-dashboard/a-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CourseDetailsComponent } from './course-details/course-details.componen
     LoginComponent,
     RegisterComponent,
     AboutUsComponent,
-    CourseDetailsComponent
+    CourseDetailsComponent,
+    ADashboardComponent
   ],
   imports: [
     BrowserModule,
