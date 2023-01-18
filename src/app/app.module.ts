@@ -14,6 +14,10 @@ import { CourseDetailsComponent } from './course-details/course-details.componen
 import { ADashboardComponent } from './a-dashboard/a-dashboard.component';
 import { ACourseComponent } from './a-course/a-course.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { SearchComponent } from './search/search.component';
+import { AClassroomComponent } from './a-classroom/a-classroom.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,11 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     CourseDetailsComponent,
     ADashboardComponent,
     ACourseComponent,
-    DashboardComponent
+    DashboardComponent,
+    HeaderComponent,
+    FooterComponent,
+    SearchComponent,
+    AClassroomComponent
   ],
   imports: [
     BrowserModule,
