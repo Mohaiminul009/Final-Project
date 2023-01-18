@@ -12,6 +12,8 @@ import { RegisterComponent } from './register/register.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { CourseDetailsComponent } from './course-details/course-details.component';
 import { ADashboardComponent } from './a-dashboard/a-dashboard.component';
+import { ACourseComponent } from './a-course/a-course.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { ADashboardComponent } from './a-dashboard/a-dashboard.component';
     RegisterComponent,
     AboutUsComponent,
     CourseDetailsComponent,
-    ADashboardComponent
+    ADashboardComponent,
+    ACourseComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

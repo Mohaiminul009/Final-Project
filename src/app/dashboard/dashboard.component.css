@@ -1,60 +1,5 @@
-.body {
-    width: 100%;
-    background: aliceblue;
-    position: relative;
-    display: flex;
-}
-#menu{
-    background-color: rgba(0,8,51,0.9);
-    width: 15%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-}
-#menu .head_part{
-    display: flex;
-    align-items: center;
-    /* color: white; */
-    padding: 30px 0 0 30px;
-}
-#menu .items{
-    margin-top: 40px;
-}
-#menu .items li{
-    list-style: none;
-    padding: 15px 0;
-    transition: 0.3s ease;
-}
-#menu .items li i {
-    color: white;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
-    font-size: 15px;
-    margin: 0 10px 0 25px;
-}
-#menu .items li a{
-    text-decoration: none;
-    color: white;
-    font-size: 15px;
-    font-weight: 300px;
-    transition: 0.3s ease;
-}
-#menu .items li:hover{
-    background: aliceblue;
-    cursor: pointer;
-}
-#menu .items li:nth-child(1){
-    border-left: 4px solid white;
-}
-#menu .items li:hover i,
-#menu .items li:hover a{
-    color: rgba(0,8,51,0.9);
-}
-
-/* #interface{
+#interface{
+    margin-top: 0;
     width: calc(100% - 15%);
     margin-left: 15%;
     position: relative;
@@ -108,7 +53,7 @@
 }
 #menu-btn{
     display: none;
-    color: #33ccc5;
+    color: rgba(0,8,51,0.9);
     font-size: 20px;
     cursor: pointer;
     margin-right: 20px;
@@ -225,72 +170,4 @@ tbody tr td{
    font-size: 14px;
    color: black; 
    font-weight: 600;
-} */
-
-@media (max-width: 769px) {
-    #menu{
-        width: 270px;
-        position: fixed;
-        left: -270px;
-        transition: 0.3s ease;
-    }
-    #menu.active{
-        left: 0px;
-    }
-    #menu-btn{
-        display: initial;
-    }
-    #interface{
-        width: 100%;
-        margin-left: 0px;
-        display: inline-block;
-        transition: 0.3s ease;
-    }
-    #menu.active~#interface{
-        width: calc(100% - 270px);
-        margin-left: 270px;
-        transition: 0.3s ease;
-    }
-    #interface .navigation{
-        width: 100%;
-    }
-    .values{
-        padding: 30px 30px 0 30px; 
-        justify-content: flex-start;
-    }
-    .values .val-box{
-        padding: 16px 20px;
-        margin: 10px 20px 10px 0;
-    }
-    .board{
-        width: 92%;
-        padding: 0;
-        overflow-x: auto;
-    }
-    table{
-        width: 100%;
-        border-collapse: collapse;
-    }
-}
-
-@media (max-width:477px) {
-    #interface .navigation{
-        padding: 15px;
-    }
-    #interface .navigation .search input{
-        width: 150px;
-    }
-    .i-name{
-        padding: 30px 15px 0 15px;
-    }
-    .values{
-        padding: 15px 15px 0 15px;
-    }
-    .values .val-box{
-        width: 100%;
-        margin: 8px 0;
-    }
-    .board{
-        margin: 30px 15px 30px 15px;
-    }
 }
