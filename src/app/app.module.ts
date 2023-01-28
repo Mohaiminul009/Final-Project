@@ -20,6 +20,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SearchComponent } from './search/search.component';
 import { AClassroomComponent } from './a-classroom/a-classroom.component';
+import { ACourseViewComponent } from './a-course-view/a-course-view.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { AClassroomComponent } from './a-classroom/a-classroom.component';
     HeaderComponent,
     FooterComponent,
     SearchComponent,
-    AClassroomComponent
+    AClassroomComponent,
+    ACourseViewComponent
   ],
   imports: [
     BrowserModule,
