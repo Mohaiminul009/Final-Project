@@ -2,12 +2,14 @@
     <table class="table table-striped">
         <thead>
             <tr>
+                <th>Category ID</th>
                 <th>Category Name</th>
                 <th>Action</th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let category of categories">
+                <td>{{category.course_cat_id}}</td>
                 <td>{{category.courseCatName}}</td>
                 <td>
                     <a href="#" style="color: SlateBlue; text-decoration: none;"><i class="fa-solid fa-pen-to-square"></i> Edit</a>

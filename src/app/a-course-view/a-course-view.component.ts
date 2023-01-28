@@ -15,7 +15,9 @@ export class ACourseViewComponent implements OnInit{
   
   ngOnInit(): void {
     this.courseCategoryService.getAll().subscribe((data: CourseCategory[]) => {
+    
       this.categories = data;
+      console.log('All Data',this.categories);
     })
   }
 

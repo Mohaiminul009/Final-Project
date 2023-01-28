@@ -1,4 +1,4 @@
 export interface CourseCategory{
-    id:number;
+    course_cat_id:number;
     courseCatName:string;
 }
