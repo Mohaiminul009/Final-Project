@@ -21,6 +21,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SearchComponent } from './search/search.component';
 import { AClassroomComponent } from './a-classroom/a-classroom.component';
 import { ACourseViewComponent } from './a-course-view/a-course-view.component';
+import { ACourseEditComponent } from './a-course-edit/a-course-edit.component';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { ACourseViewComponent } from './a-course-view/a-course-view.component';
     FooterComponent,
     SearchComponent,
     AClassroomComponent,
-    ACourseViewComponent
+    ACourseViewComponent,
+    ACourseEditComponent
   ],
   imports: [
     BrowserModule,

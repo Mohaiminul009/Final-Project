@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CourseCategory } from '../Model/coursecategory.model';
 import { CourseCategoryService } from '../Service/course-category.service';
 
@@ -11,13 +12,19 @@ export class ACourseViewComponent implements OnInit{
 
   categories: CourseCategory[] = [];
 
-  constructor(public courseCategoryService: CourseCategoryService) { }
+  constructor(public courseCategoryService: CourseCategoryService,
+    private router: Router) { }
   
   ngOnInit(): void {
     this.courseCategoryService.getAll().subscribe((data: CourseCategory[]) => {
-    
       this.categories = data;
-      console.log('All Data',this.categories);
+    })
+  }
+
+  delete(id:number){
+    this.courseCategoryService.delete(id).subscribe(res => {
+         this.categories = this.categories.filter(item => item.course_cat_id !== id);
+         this.router.navigateByUrl('adashboard/acourseview');
     })
   }
 

@@ -17,7 +17,7 @@ export class CourseCategoryService {
   }
 
   constructor(private httpClient: HttpClient) { }
-
+  
   create(courseCat:CourseCategory): Observable<any>{
     return this.httpClient.post(this.api + '/post', JSON.stringify(courseCat), this.httpOptions)
     .pipe( 
@@ -27,6 +27,27 @@ export class CourseCategoryService {
 
   getAll(): Observable<any> {
     return this.httpClient.get(this.api + '/getall')
+    .pipe(
+      catchError(this.errorHandler)
+    )
+  }
+
+  getById(id:number): Observable<any> {
+    return this.httpClient.get(this.api + '/get/' + id)
+    .pipe(
+      catchError(this.errorHandler)
+    )
+  }
+
+  update(id:number, courseCategory:CourseCategory): Observable<any> {
+    return this.httpClient.put(this.api + '/update/' + id, JSON.stringify(courseCategory), this.httpOptions)
+    .pipe( 
+      catchError(this.errorHandler)
+    )
+  }
+
+  delete(id:number){
+    return this.httpClient.delete(this.api + '/delete/' + id, this.httpOptions)
     .pipe(
       catchError(this.errorHandler)
     )

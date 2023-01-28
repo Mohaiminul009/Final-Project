@@ -30,11 +30,8 @@
                     <div class="row form-group" align="center">
                         <div class="col-12">
                             <select name="course_cat_name" class="form-control">
-                                <option hidden>Course Category <i class="fa-solid fa-circle-down"></i></option>
-                                <option>Microsoft Office</option>
-                                <option>Graphics Design</option>
-                                <option>Web Development</option>
-                                <option>Web Development</option>
+                                <option hidden>Course Category</option>
+                                <option *ngFor="let category of categories">{{category.courseCatName}}</option>
                             </select>
                         </div>
                     </div>

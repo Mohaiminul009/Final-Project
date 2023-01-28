@@ -2,18 +2,16 @@
     <table class="table table-striped">
         <thead>
             <tr>
-                <th>Category ID</th>
                 <th>Category Name</th>
                 <th>Action</th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let category of categories">
-                <td>{{category.course_cat_id}}</td>
                 <td>{{category.courseCatName}}</td>
                 <td>
-                    <a href="#" style="color: SlateBlue; text-decoration: none;"><i class="fa-solid fa-pen-to-square"></i> Edit</a>
-                    <a href="#" style="margin-left: 40px; color: Tomato; text-decoration: none;"><i class="fa-solid fa-trash"></i> Delete</a>
+                    <a href="#" style="color: SlateBlue; text-decoration: none;" [routerLink]="['/adashboard/', 'acourseedit', category.course_cat_id]"><i class="fa-solid fa-pen-to-square"></i> Edit</a>
+                    <a href="#" style="margin-left: 40px; color: Tomato; text-decoration: none;" (click)="delete(category.course_cat_id)"><i class="fa-solid fa-trash"></i> Delete</a>
                 </td>
             </tr>
         </tbody>
