@@ -26,6 +26,7 @@ export class ACourseComponent implements OnInit{
   ngOnInit(): void {
     this.form = new FormGroup({
       courseCatName: new FormControl('', Validators.required),
+      course_cat_id: new FormControl(0, Validators.required),
 
       courseName: new FormControl('', Validators.required),
       courseUploadDate: new FormControl('', Validators.required),
@@ -47,6 +48,11 @@ export class ACourseComponent implements OnInit{
     this.courseCatService.create(this.form.value).subscribe((res:any) => {
       this.router.navigateByUrl('adashboard/acourse');
     })
+  }
+
+
+  submit(){
+    console.log(this.form.value)
   }
 
 }
