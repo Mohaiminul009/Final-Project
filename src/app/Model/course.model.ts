@@ -12,6 +12,4 @@ export interface Course{
     instructorId:number;
     coursePrice:number;
     courseDiscount:number;
-    coursePic:string;
-
 }
