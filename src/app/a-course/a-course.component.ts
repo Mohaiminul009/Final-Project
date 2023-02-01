@@ -27,6 +27,7 @@ export class ACourseComponent implements OnInit{
     this.form = new FormGroup({
       courseCatName: new FormControl('', Validators.required),
       course_cat_id: new FormControl(0, Validators.required),
+      instructor_id: new FormControl(0, Validators.required),
 
       courseName: new FormControl('', Validators.required),
       courseUploadDate: new FormControl('', Validators.required),
@@ -36,7 +37,9 @@ export class ACourseComponent implements OnInit{
       courseAccess: new FormControl('', Validators.required),
       courseDescription: new FormControl('', Validators.required),
       courseCurriculum: new FormControl('', Validators.required),
-      instructorName: new FormControl('', Validators.required),
+      coursePrice: new FormControl('', Validators.required),
+      courseDiscount: new FormControl('', Validators.required),
+      coursePic: new FormControl('', Validators.required)
     })
 
     this.courseCatService.getAll().subscribe((data: CourseCategory[]) => {

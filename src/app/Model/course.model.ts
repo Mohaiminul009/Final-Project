@@ -8,9 +8,10 @@ export interface Course{
     courseAccess:string;
     courseDescription:string;
     courseCurriculum:string;
-    courseCatName:string;
-    instructorName:string;
     courseCatId:number;
     instructorId:number;
+    coursePrice:number;
+    courseDiscount:number;
+    coursePic:string;
 
 }

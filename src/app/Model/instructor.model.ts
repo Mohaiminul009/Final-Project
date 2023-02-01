@@ -1,5 +1,5 @@
 export interface Instructor{
-    id:number;
+    instructor_id:number;
     instructorName:string;
     instructorUsername:string;
     instructorPassword:string;

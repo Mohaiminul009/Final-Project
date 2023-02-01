@@ -1,4 +1,4 @@
-<div class="" style="margin-top: 100px; margin-left: 20px; width: 90%; background: white; padding: 20px;">
+<div class="" style="margin-top: 100px; margin-left: 20px; width: 90%; padding: 20px;">
     <div>
         <div class="container" style="margin-top: 100px;">
             <div class="row">
@@ -20,24 +20,25 @@
     </div>
 </div>
 <br>
-<div style="margin-top: 100px; margin-left: 20px; width: 90%; background: white; padding: 20px;">
+<div style="margin-top: 100px; margin-left: 20px; width: 90%; padding: 20px;">
     <div class="container" style="margin-top: 100px;">
         <div style=" border: none; border-radius: 5px; height: 40px; outline: none; font-size: 18px;" align="center"><label style="color: #33ccc5; font-weight: 600;"><i class="fa-solid fa-circle-plus"></i> Create Course</label></div>
+        <br>
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-8">
                 <form [formGroup]="form" (ngSubmit)="submit()">
-                    <div class="row form-group" align="center">
-                        <div class="col-md-6">
+                    <div class="row form-group">
+                        <div class="col-md-2"><label>Category</label></div>
+                        <div class="col-md-4">
                             <select formControlName="course_cat_id" class="form-control">
-                                <option hidden>Course Category</option>
                                 <option *ngFor="let category of categories" value="{{category.course_cat_id}}">{{category.courseCatName}}</option>
                             </select>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-2"><label>Instructor</label></div>
+                        <div class="col-md-4">
                             <select formControlName="instructorName" class="form-control">
-                                <option hidden>Instructor Name</option>
-                                <option *ngFor="let instructor of instructors">{{instructor.instructorName}}</option>
+                                <option *ngFor="let instructor of instructors" value="{{instructor.instructor_id}}">{{instructor.instructorName}}</option>
                             </select>
                         </div>
                     </div>
@@ -68,6 +69,13 @@
                         <div class="col-md-4"><textarea formControlName="courseDescription" id="" cols="30" rows="3" class="form-control"></textarea></div>
                         <div class="col-md-2"><label>Curriculum</label></div>
                         <div class="col-md-4"><textarea formControlName="courseCurriculum" id="" cols="30" rows="3" class="form-control"></textarea></div>
+                    </div>
+                    <br>
+                    <div class="row form-group">
+                        <div class="col-md-2"><label>Price</label></div>
+                        <div class="col-md-4"><input type="text" class="form-control" formControlName="coursePrice"></div>
+                        <div class="col-md-2"><label>Resources</label></div>
+                        <div class="col-md-4"><input type="text" class="form-control" formControlName="courseDiscount"></div>
                     </div>
                     <br>
                     <div class="row form-group">
