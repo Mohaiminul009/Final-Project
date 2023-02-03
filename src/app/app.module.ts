@@ -22,6 +22,9 @@ import { SearchComponent } from './search/search.component';
 import { AClassroomComponent } from './a-classroom/a-classroom.component';
 import { ACourseViewComponent } from './a-course-view/a-course-view.component';
 import { ACourseEditComponent } from './a-course-edit/a-course-edit.component';
+import { InstructorFormComponent } from './instructor-form/instructor-form.component';
+import { InstructorComponent } from './instructor/instructor.component';
+import { InstructorEditComponent } from './instructor-edit/instructor-edit.component';
 
 
 @NgModule({
@@ -43,7 +46,10 @@ import { ACourseEditComponent } from './a-course-edit/a-course-edit.component';
     SearchComponent,
     AClassroomComponent,
     ACourseViewComponent,
-    ACourseEditComponent
+    ACourseEditComponent,
+    InstructorFormComponent,
+    InstructorComponent,
+    InstructorEditComponent
   ],
   imports: [
     BrowserModule,

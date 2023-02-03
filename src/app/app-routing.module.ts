@@ -12,6 +12,9 @@ import { CourseDetailsComponent } from './course-details/course-details.componen
 import { CourseComponent } from './course/course.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
+import { InstructorEditComponent } from './instructor-edit/instructor-edit.component';
+import { InstructorFormComponent } from './instructor-form/instructor-form.component';
+import { InstructorComponent } from './instructor/instructor.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { SearchComponent } from './search/search.component';
@@ -26,14 +29,18 @@ const routes: Routes = [
   {path:"course", component:CourseComponent},
   {path:"blog", component:BlogComponent},
   {path:"aboutus", component:AboutUsComponent},
-  {path:"coursedetails", component:CourseDetailsComponent},
+  {path:"coursedetails/:uCourseId", component:CourseDetailsComponent},
+  {path:"instructorform", component:InstructorFormComponent},
   {path:"adashboard", component:ADashboardComponent,
   children: [
   {path:'', component:DashboardComponent},
   {path:"acourse", component:ACourseComponent},
   {path:"acourseview", component:ACourseViewComponent},
   {path:"acourseedit/:courseCatId", component:ACourseEditComponent},
-  {path:"aclassroom", component:AClassroomComponent}
+  {path:"aclassroom", component:AClassroomComponent},
+  {path:"instructor", component:InstructorComponent},
+  {path:"instructoredit/:applicantId", component:InstructorEditComponent},
+  {path:"instructoredit/:instructorId", component:InstructorEditComponent}
   ]},
 ];
 

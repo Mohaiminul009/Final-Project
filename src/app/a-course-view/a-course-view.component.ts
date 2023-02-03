@@ -24,7 +24,7 @@ export class ACourseViewComponent implements OnInit{
     this.courseCategoryService.delete(id).subscribe(res => {
          this.categories = this.categories.filter(item => item.course_cat_id !== id);
     })
-  }
+  };
   alertConfirmation(id:number){
     Swal.fire({
       title: 'Are you sure?',

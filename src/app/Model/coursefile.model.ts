@@ -1,7 +1,6 @@
 export interface CourseFile{
     course_file_id: number;
-    coursePic: string;
-    coursePdf: string;
-    courseVideo: string;
+    courseTitle: string;
+    courseUrl: string;
     courseId: number;
 }

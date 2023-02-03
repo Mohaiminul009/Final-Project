@@ -1,7 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { catchError, throwError } from 'rxjs';
-import { Observable } from 'rxjs/internal/Observable';
+import { catchError, Observable, throwError } from 'rxjs';
 import { Course } from '../Model/course.model';
 
 @Injectable({

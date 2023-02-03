@@ -30,7 +30,7 @@
                     <p class="text-warning"><span style="font-size: 20px; font-weight: 600;">4.5 </span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></p>
                 </div>
                 <div class="col-md-2" style="display: flex; align-items: center;">
-                    <a class="btn btn-outline-primary" href="/coursedetails">View Summary</a>
+                    <a class="btn btn-outline-primary" href="">View Summary</a>
                 </div>
             </div>
 
@@ -180,7 +180,28 @@
                     <a class="btn btn-outline-primary">View Summary</a>
                 </div>
             </div>
-        </div>
+
+            <div class="row mt-5" style="background: aliceblue;" *ngFor="let course of courses">
+                <div class="col-md-2">
+                    <img src="../../assets/images/{{course.coursePic}}" alt="" style="height: 120px; width: 90%; border-radius: 10px;">
+                </div>
+                <div class="col-md-5">
+                    <h5><a href="" style="text-decoration: none; color: black;">{{course.courseName}}</a></h5>
+                    <p class="d-inline text-light" style="background: Tomato; padding:0 5px 0 5px; border-radius: 15px; font-size: 13px; font-weight: 600;">{{course.coursePrice}}</p>
+                </div>
+                <div class="col-md-1">
+                    <img src="../../assets/images/icons8-teacher-100.png" alt="" class="rounded-circle" style="width: 50px; height: 50px; float: right;">
+                </div>
+                <div class="col-md-2" style="line-height: .5rem;">
+                    <h6>{{course.instructorName2}}</h6>
+                    <p>{{course.courseUploadDate}}</p>
+                    <p class="text-warning"><span style="font-size: 20px; font-weight: 600;">4.5 </span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></p>
+                </div>
+                <div class="col-md-2" style="display: flex; align-items: center;">
+                    <a class="btn btn-outline-primary" [routerLink]="['/coursedetails/', course.course_id]">View Summary</a>
+                </div>
+            </div>
+        </div> 
     </div>
-</div>
+</div> 
 <app-footer></app-footer>

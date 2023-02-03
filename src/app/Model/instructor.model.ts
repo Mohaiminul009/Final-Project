@@ -8,4 +8,5 @@ export interface Instructor{
     instructorNid:string;
     instructorDesignation:string;
     instructorWorkplace:string;
+    instructorPic: string;
 }

@@ -17,17 +17,17 @@ export class CourseFileService {
   
   constructor(private httpClient: HttpClient) { }
 
-  create(file: File): Observable<HttpEvent<any>> {
+  create(file: File, id: number): Observable<HttpEvent<any>> {
     const formData: FormData = new FormData();
     formData.append('file', file);
-    const req = new HttpRequest('POST', `${this.api}/post`, formData, {
+    const req = new HttpRequest('POST', `${this.api}/post?id=` +id, formData, {
       reportProgress: true,
       responseType: 'json'
     });
     return this.httpClient.request(req);
   }
 
-  getAll(): Observable<any> {
+  getFiles(): Observable<any> {
     return this.httpClient.get(`${this.api}/getall`);
   }
 }
