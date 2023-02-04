@@ -32,7 +32,7 @@ const routes: Routes = [
   {path:"aboutus", component:AboutUsComponent},
   {path:"coursedetails/:uCourseId", component:CourseDetailsComponent},
   {path:"instructorform", component:InstructorFormComponent},
-  {path:"cart", component:CartComponent},
+  {path:"cart/:cartCourseId", component:CartComponent},
   {path:"adashboard", component:ADashboardComponent,
   children: [
   {path:'', component:DashboardComponent},

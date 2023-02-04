@@ -12,7 +12,6 @@ export class CourseDetailsComponent implements OnInit{
 
   course_id!: number;
   course!: Course;
-  courses: Course[] = [];
 
   constructor(public courseService: CourseService,
     private route: ActivatedRoute){}
@@ -23,9 +22,9 @@ export class CourseDetailsComponent implements OnInit{
       this.course = data;
     });
 
-    this.courseService.getAll().subscribe((data: Course[]) => {
-      this.courses = data;
-    })
+    // this.courseService.getAll().subscribe((data: Course[]) => {
+    //   this.courses = data;
+    // })
   }
 
 }

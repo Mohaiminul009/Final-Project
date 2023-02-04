@@ -2,6 +2,7 @@
     background: rgba(0,8,51,0.9);
 }
 .nav{
+    margin-top: 100px;
     position: fixed;
 }
 .nav-item{
