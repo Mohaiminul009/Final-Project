@@ -25,6 +25,7 @@ import { ACourseEditComponent } from './a-course-edit/a-course-edit.component';
 import { InstructorFormComponent } from './instructor-form/instructor-form.component';
 import { InstructorComponent } from './instructor/instructor.component';
 import { InstructorEditComponent } from './instructor-edit/instructor-edit.component';
+import { CartComponent } from './cart/cart.component';
 
 
 @NgModule({
@@ -49,7 +50,8 @@ import { InstructorEditComponent } from './instructor-edit/instructor-edit.compo
     ACourseEditComponent,
     InstructorFormComponent,
     InstructorComponent,
-    InstructorEditComponent
+    InstructorEditComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

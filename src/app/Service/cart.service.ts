@@ -1,14 +1,14 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, Observable, throwError } from 'rxjs';
-import { Applicant } from '../Model/applicant.model';
+import { Cart } from '../Model/cart.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class InstructorFormService {
+export class CartService {
 
-  private api = "http://localhost:8080/applicant";
+  private api = "http://localhost:8080/cart";
 
   httpOptions = {
     headers: new HttpHeaders({
@@ -18,8 +18,8 @@ export class InstructorFormService {
 
   constructor(private httpClient: HttpClient) { }
 
-  create(applicant:Applicant): Observable<any>{
-    return this.httpClient.post(this.api + '/post', JSON.stringify(applicant), this.httpOptions)
+  create(cart:Cart): Observable<any>{
+    return this.httpClient.post(this.api + '/post', JSON.stringify(cart), this.httpOptions)
     .pipe( 
       catchError(this.errorHandler)
     )
@@ -39,22 +39,8 @@ export class InstructorFormService {
     )
   }
 
-  update(id:number, applicant:Applicant): Observable<any> {
-    return this.httpClient.put(this.api + '/update/' + id, JSON.stringify(applicant), this.httpOptions)
-    .pipe( 
-      catchError(this.errorHandler)
-    )
-  }
-
   delete(id:number){
     return this.httpClient.delete(this.api + '/delete/' + id, this.httpOptions)
-    .pipe(
-      catchError(this.errorHandler)
-    )
-  }
-
-  countAll(): Observable<any> {
-    return this.httpClient.get(this.api + '/getcount',{responseType: "text"})
     .pipe(
       catchError(this.errorHandler)
     )

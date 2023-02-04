@@ -11,11 +11,13 @@ export class ADashboardComponent implements OnInit{
 
   applicant: Applicant[] = [];
 
+  countData!: string;
   constructor(public instructorFormService: InstructorFormService) { }
 
   ngOnInit(): void {
-    this.instructorFormService.countAll().subscribe((data: Applicant[]) => {
-      this.applicant = data;
+    this.instructorFormService.countAll().subscribe((data) => {
+      this.countData = data;
+      console.log(this.countData)
     })
   }
 
