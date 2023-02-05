@@ -15,6 +15,7 @@ export class CartComponent implements OnInit{
 
   course_id!: number;
   course!: Course;
+  courses: Course[] = [];
   cart!:Cart;
   form!:FormGroup;
 
@@ -48,6 +49,12 @@ export class CartComponent implements OnInit{
     //   });
     //   console.log(this.addForm.value);
   }
+
+  delete(id:number){
+    this.cartService.delete(id).subscribe(res => {
+         this.courses = this.courses.filter(item => item.course_id !== id);
+    })
+  };
 
   
 

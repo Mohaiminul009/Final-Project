@@ -25,16 +25,16 @@ export class CourseComponent implements OnInit{
       this.courses = data;
     })
 
-    this.form = new FormGroup({
-      ccourseCname :new FormControl(this.courses.courseName),
-      courseCduration :new FormControl(this.course.courseDuration),
-      courseCarticle :new FormControl(this.course.courseArticle) ,
-      courseCresource :new FormControl(this.course.courseResource) ,
-      courseCaccess :new FormControl(this.course.courseAccess) ,
-      courseCinstructorName :new FormControl(this.course.instructorName2) ,
-      courseCprice :new FormControl(this.course.coursePrice) ,
-      courseCuploadDate :new FormControl(this.course.courseUploadDate) 
-    })
+    // this.form = new FormGroup({
+    //   ccourseCname :new FormControl(this.courses.courseName),
+    //   courseCduration :new FormControl(this.course.courseDuration),
+    //   courseCarticle :new FormControl(this.course.courseArticle) ,
+    //   courseCresource :new FormControl(this.course.courseResource) ,
+    //   courseCaccess :new FormControl(this.course.courseAccess) ,
+    //   courseCinstructorName :new FormControl(this.course.instructorName2) ,
+    //   courseCprice :new FormControl(this.course.coursePrice) ,
+    //   courseCuploadDate :new FormControl(this.course.courseUploadDate) 
+    // })
     
   }
   submit(){
