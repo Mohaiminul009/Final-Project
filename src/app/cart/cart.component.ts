@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Cart } from '../Model/cart.model';
 import { Course } from '../Model/course.model';
@@ -16,10 +16,9 @@ export class CartComponent implements OnInit{
   course_id!: number;
   course!: Course;
   cart!:Cart;
-  addForm!: FormGroup;
+  form!:FormGroup;
 
   constructor(public courseService: CourseService,
-    private formBuilder:FormBuilder,
     public cartService: CartService,
     private router: Router,
     private route: ActivatedRoute){}
@@ -30,22 +29,24 @@ export class CartComponent implements OnInit{
       this.course = data;
     });
 
-    this.addForm = this.formBuilder.group({
-        cart_id : '',
-        courseCname : this.course.courseName,
-        courseCduration : this.course.courseDuration,
-        courseCarticle : this.course.courseArticle,
-        courseCresource : this.course.courseResource,
-        courseCaccess : this.course.courseAccess,
-        courseCinstructorName : this.course.instructorName2,
-        courseCprice : this.course.coursePrice,
-        courseCuploadDate : this.course.courseUploadDate
-      });
+    
 
-      this.cartService.create(this.addForm.value).subscribe(data => {
-        this.ngOnInit();
-      });
-      console.log(this.addForm.value);
+    // this.addForm = this.formBuilder.group({
+    //     id : '',
+    //     courseCname : this.course.courseName,
+    //     courseCduration : this.course.courseDuration,
+    //     courseCarticle : this.course.courseArticle,
+    //     courseCresource : this.course.courseResource,
+    //     courseCaccess : this.course.courseAccess,
+    //     courseCinstructorName : this.course.instructorName2,
+    //     courseCprice : this.course.coursePrice,
+    //     courseCuploadDate : this.course.courseUploadDate
+    //   });
+
+    //   this.cartService.createCart(this.addForm.value).subscribe(data => {
+    //     this.ngOnInit();
+    //   });
+    //   console.log(this.addForm.value);
   }
 
   

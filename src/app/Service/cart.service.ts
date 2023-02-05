@@ -9,6 +9,7 @@ import { Cart } from '../Model/cart.model';
 export class CartService {
 
   private api = "http://localhost:8080/cart";
+  private baseUrl ='http://localhost:3000/cart';
 
   httpOptions = {
     headers: new HttpHeaders({
@@ -23,6 +24,10 @@ export class CartService {
     .pipe( 
       catchError(this.errorHandler)
     )
+  }
+
+  createCart(cart : Cart){
+    return this.httpClient.post<Cart>(this.baseUrl, cart);
   }
 
   getAll(): Observable<any> {

@@ -31,7 +31,7 @@
                 </div>
                 <div class="col-md-3" style="display: flex; align-items: center;">
                     <a class="btn btn-sm btn-outline-primary" [routerLink]="['/coursedetails/', course.course_id]">View Summary</a>
-                    <a href="#" class="btn btn-sm btn-warning" style="margin-left: 20px; padding-top: 0px; padding: 5px; font-size: 15px;" [routerLink]="['/cart/', course.course_id]"><i class="fa-solid fa-cart-plus"></i> Add to cart</a>
+                    <a href="#" class="btn btn-sm btn-warning" style="margin-left: 20px; padding-top: 0px; padding: 5px; font-size: 15px;" [routerLink]="['/cart/', course.course_id]" (click)="submit()"><i class="fa-solid fa-cart-plus"></i> Add to cart</a>
                 </div>
             </div>
         </div> 
