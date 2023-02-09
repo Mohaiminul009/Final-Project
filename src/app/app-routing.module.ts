@@ -18,6 +18,7 @@ import { HomeComponent } from './home/home.component';
 import { InstructorEditComponent } from './instructor-edit/instructor-edit.component';
 import { InstructorFormComponent } from './instructor-form/instructor-form.component';
 import { InstructorComponent } from './instructor/instructor.component';
+import { InstructorseditComponent } from './instructorsedit/instructorsedit.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { SearchComponent } from './search/search.component';
@@ -47,7 +48,7 @@ const routes: Routes = [
   {path:"aclassroom", component:AClassroomComponent},
   {path:"instructor", component:InstructorComponent},
   {path:"instructoredit/:applicantId", component:InstructorEditComponent},
-  {path:"instructoredit/:instructorId", component:InstructorEditComponent}
+  {path:"instructorsedit/:instructorId", component:InstructorseditComponent}
   ]},
 ];
 

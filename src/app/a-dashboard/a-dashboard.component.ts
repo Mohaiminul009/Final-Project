@@ -19,6 +19,8 @@ export class ADashboardComponent implements OnInit{
       this.countData = data;
       console.log(this.countData)
     })
+
+    
   }
 
 }

@@ -22,7 +22,7 @@
     <table class="table table-striped">
         <thead>
             <tr>
-                <th>Category Name</th>
+                <th>Course Name</th>
                 <th>Date</th>
                 <th>Duration</th>
                 <th>Article</th>
@@ -46,8 +46,8 @@
                 <td>{{course.courseDiscount}}</td>
                 <td>{{course.coursePic}}</td>
                 <td>
-                    <a href="#" style="color: SlateBlue; text-decoration: none;" [routerLink]="['/adashboard/', 'acoursesedit', course.course_id]"><i class="fa-solid fa-pen-to-square"></i> Edit</a>
-                    <a href="adashboard/acourseview" style="margin-left: 40px; color: Tomato; text-decoration: none;" (click)="delete2(course.course_id)"><i class="fa-solid fa-trash"></i> Delete</a>
+                    <a href="#" style="color: SlateBlue; text-decoration: none;" [routerLink]="['/adashboard/', 'acourses', course.course_id]"><i class="fa-solid fa-pen-to-square"></i> Edit</a>
+                    <a href="adashboard/acourseview" style="margin-left: 40px; color: Tomato; text-decoration: none;" (click)="delete2(course.course_id)"><i class="fa-solid fa-trash"></i></a>
                 </td>
             </tr>
         </tbody>
