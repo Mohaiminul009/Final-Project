@@ -20,14 +20,14 @@
   
       <div class="col-md-4">
         <nav class="nav d-flex flex-row-reverse" *ngIf="!isLoggedIn">
-          <a class="nav-link text-light" routerLink="/addcart"><img style="height: 30px; width: 30px; border-radius: 50%; margin-top: 5px;" src="../../assets/images/icons8-cart-100.png" alt=""><span class="badge" style="font-size: 10px;">0</span></a>
+          <a class="nav-link text-light" routerLink="/cart"><img style="height: 30px; width: 30px; border-radius: 50%; margin-top: 5px;" src="../../assets/images/icons8-cart-100.png" alt=""><span class="badge" style="font-size: 10px;" *ngIf="cartQuantity">{{cartQuantity}}</span></a>
           <a class="nav-link text-light" routerLink="/login" style="padding-top: 14px;">Sign in</a>
           <!-- <button class="text-light" id="myBtn" routerLink="/search" style="background: transparent; border: none; font-size: 18px; font-weight: 600;"><i class="fas fa-search"></i></button> -->
         </nav>
 
         <nav class="nav d-flex flex-row-reverse" *ngIf="isLoggedIn">
           <a class="nav-link text-light" (click)="logout()"><img style="height: 30px; width: 30px; margin-top: 5px;" src="../../assets/images/icons8-sign-out-100.png" alt=""></a>
-          <a class="nav-link text-light" routerLink="/addcart"><img style="height: 30px; width: 30px; border-radius: 50%; margin-top: 5px;" src="../../assets/images/icons8-cart-100.png" alt=""><span class="badge" style="font-size: 10px;">0</span></a>
+          <a class="nav-link text-light" routerLink="/cart"><img style="height: 30px; width: 30px; border-radius: 50%; margin-top: 5px;" src="../../assets/images/icons8-cart-100.png" alt=""><span class="badge" style="font-size: 10px;" *ngIf="cartQuantity">{{cartQuantity}}</span></a>
           <a class="nav-link text-light" routerLink="/login" style="padding-top: 14px;">{{username}}</a>
           <!-- <button class="text-light" id="myBtn" routerLink="/search" style="background: transparent; border: none; font-size: 18px; font-weight: 600;"><i class="fas fa-search"></i></button> -->
         </nav>

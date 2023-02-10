@@ -26,9 +26,9 @@ import { InstructorFormComponent } from './instructor-form/instructor-form.compo
 import { InstructorComponent } from './instructor/instructor.component';
 import { InstructorEditComponent } from './instructor-edit/instructor-edit.component';
 import { CartComponent } from './cart/cart.component';
-import { AddCartComponent } from './add-cart/add-cart.component';
 import { AcoursesEditComponent } from './acourses-edit/acourses-edit.component';
 import { InstructorseditComponent } from './instructorsedit/instructorsedit.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -55,9 +55,9 @@ import { InstructorseditComponent } from './instructorsedit/instructorsedit.comp
     InstructorComponent,
     InstructorEditComponent,
     CartComponent,
-    AddCartComponent,
     AcoursesEditComponent,
-    InstructorseditComponent
+    InstructorseditComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

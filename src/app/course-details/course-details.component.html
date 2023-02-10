@@ -34,7 +34,7 @@
       <div class="col-md-4" style=" border-radius: 15px; margin: 10px 0 10px 0; ">
         <div style="background: white; border: 1px solid #33ccc5; border-radius: 15px; padding: 10px;">
             <div class="text-center">
-                <p class="d-inline text-light" style="background: #FF6347; padding:0 5px 0 5px; border-radius: 15px; font-size: 18px; font-weight: 600;">{{course.coursePrice}}</p>
+                <p class="d-inline text-light" style="background: #FF6347; padding:0 5px 0 5px; border-radius: 15px; font-size: 18px; font-weight: 600;">Tk. {{course.coursePrice}}</p>
             </div>
           <table class="table">
             <tr>
@@ -63,7 +63,8 @@
             </tr>
           </table>
           <div class="text-center">
-            <a href="/login" class="btn btn-info text-light">Enroll Now</a>
+            <a href="" class="btn btn-sm btn-info text-light" style="padding: 5px;">Enroll Now</a>
+            <a class="btn btn-sm btn-warning" style="margin-left: 20px; padding-top: 0px; padding: 5px; font-size: 15px;" (click)="addCart()"><i class="fa-solid fa-cart-plus"></i> Add to cart</a>
           </div>
         </div>
         <div class="cpy" style="border: none; background: aliceblue;">
@@ -89,4 +90,5 @@
       </div>
     </div>
   </div>
+
 <app-footer></app-footer>

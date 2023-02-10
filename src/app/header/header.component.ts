@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { AuthService } from '../Service/auth.service';
+import { CartService } from '../Service/cart.service';
 import { EventBusService } from '../Service/event-bus.service';
 import { StorageService } from '../Service/storage.service';
 
@@ -18,11 +19,18 @@ export class HeaderComponent implements OnInit{
   username?: string;
   eventBusSub?: Subscription;
 
+  cartQuantity = 0;
+
   constructor(
     private storageService: StorageService,
-    private authService: AuthService,
+    private cartService: CartService,
     private eventBusService: EventBusService
-  ) {}
+  ) {
+    cartService.getCartObservable().subscribe((newcart)=>{
+      this.cartQuantity = newcart.totalCount;
+    })
+  }
+
   ngOnInit(): void {
     this.isLoggedIn = this.storageService.isLoggedIn();
 

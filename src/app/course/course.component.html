@@ -4,20 +4,20 @@
         <div class="col-md-2" id="sidebar">
             <div class="nav">
                 <ul>
-                    <li class="nav-item"><a class="btn btn-outline-primary" href="">Graphics Design</a></li>
-                    <li class="nav-item"><a class="btn btn-outline-primary" href="">Web Development</a></li>
-                    <li class="nav-item"><a class="btn btn-outline-primary" href="">UI Design</a></li>
-                    <li class="nav-item"><a class="btn btn-outline-primary" href="">Office Application</a></li>
+                    <li class="nav-item"><a class="btn btn-light" href="" style="font-weight: 500;">Graphics Design</a></li>
+                    <li class="nav-item"><a class="btn btn-light" href="" style="font-weight: 500;">Web Development</a></li>
+                    <li class="nav-item"><a class="btn btn-light" href="" style="font-weight: 500;">UI Design</a></li>
+                    <li class="nav-item"><a class="btn btn-light" href="" style="font-weight: 500;">Office Application</a></li>
                 </ul>
             </div>
         </div>
 
         <div class="col-md-10">
-            <div class="row mt-5" style="background: aliceblue;" *ngFor="let course of courses">
+            <div class="row mt-5"  *ngFor="let course of courses">
                 <div class="col-md-2">
                     <img src="../../assets/images/{{course.coursePic}}" alt="" style="height: 120px; width: 90%; border-radius: 10px;">
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-5">
                     <h5><a href="" style="text-decoration: none; color: black;">{{course.courseName}}</a></h5>
                     <p class="d-inline text-light" style="background: Tomato; padding:0 5px 0 5px; border-radius: 15px; font-size: 13px; font-weight: 600;">{{course.coursePrice}}</p>
                 </div>
@@ -29,9 +29,9 @@
                     <p>{{course.courseUploadDate}}</p>
                     <p><span style="color:Orange; font-size: 15px; font-weight: 500;">4.5 </span><span><img src="../../assets/images/icons8-star-filled-15.png" alt=""></span><span><img src="../../assets/images/icons8-star-filled-15.png" alt=""></span><span><img src="../../assets/images/icons8-star-filled-15.png" alt=""></span><span><img src="../../assets/images/icons8-star-filled-15.png" alt=""></span><span><img src="../../assets/images/icons8-star-half-empty-15.png" alt=""></span></p>
                 </div>
-                <div class="col-md-3" style="display: flex; align-items: center;">
+                <div class="col-md-2" style="display: flex; align-items: center;">
                     <a class="btn btn-sm btn-outline-primary" [routerLink]="['/coursedetails/', course.course_id]">View Summary</a>
-                    <a href="#" class="btn btn-sm btn-warning" style="margin-left: 20px; padding-top: 0px; padding: 5px; font-size: 15px;" [routerLink]="['/cart/', course.course_id]" (click)="submit()"><i class="fa-solid fa-cart-plus"></i> Add to cart</a>
+                    <!-- <a href="#" class="btn btn-sm btn-warning" style="margin-left: 20px; padding-top: 0px; padding: 5px; font-size: 15px;" (click)="submit()" [routerLink]="['/cart/', course.course_id]"><i class="fa-solid fa-cart-plus"></i> Add to cart</a> -->
                 </div>
             </div>
         </div> 

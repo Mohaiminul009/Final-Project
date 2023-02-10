@@ -1,11 +1,7 @@
-export interface Cart{
-    cart_id: number;
-    courseCname: string;
-    courseCduration: string;
-    courseCarticle: string;
-    courseCresource: string;
-    courseCaccess: string;
-    courseCinstructorName: string;
-    courseCprice: number;
-    courseCuploadDate: string;
+import { CartItem } from "./cart-item.model";
+
+export class Cart{
+    items: CartItem[] = [];
+    totalPrice: number = 0;
+    totalCount: number = 0;
 }

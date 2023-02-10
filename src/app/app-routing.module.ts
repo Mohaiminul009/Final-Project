@@ -7,7 +7,6 @@ import { ACourseComponent } from './a-course/a-course.component';
 import { ADashboardComponent } from './a-dashboard/a-dashboard.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { AcoursesEditComponent } from './acourses-edit/acourses-edit.component';
-import { AddCartComponent } from './add-cart/add-cart.component';
 import { BlogComponent } from './blog/blog.component';
 import { CartComponent } from './cart/cart.component';
 import { ClassroomComponent } from './classroom/classroom.component';
@@ -35,9 +34,7 @@ const routes: Routes = [
   {path:"aboutus", component:AboutUsComponent},
   {path:"coursedetails/:uCourseId", component:CourseDetailsComponent},
   {path:"instructorform", component:InstructorFormComponent},
-  {path:"cart/:cartCourseId", component:CartComponent},
-  {path:"addcart", component:AddCartComponent},
-  {path:"addcart/:cartCourseId", component:AddCartComponent},
+  {path:"cart", component:CartComponent},
   {path:"adashboard", component:ADashboardComponent,
   children: [
   {path:'', component:DashboardComponent},

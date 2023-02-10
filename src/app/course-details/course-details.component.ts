@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Course } from '../Model/course.model';
+import { CartService } from '../Service/cart.service';
 import { CourseService } from '../Service/course.service';
 
 @Component({
@@ -14,17 +15,21 @@ export class CourseDetailsComponent implements OnInit{
   course!: Course;
 
   constructor(public courseService: CourseService,
+    private cartService: CartService,
+    private router: Router,
     private route: ActivatedRoute){}
 
   ngOnInit(): void {
     this.course_id = this.route.snapshot.params['uCourseId'];
     this.courseService.getById(this.course_id).subscribe((data: Course)=>{
       this.course = data;
-    });
+    })
 
-    // this.courseService.getAll().subscribe((data: Course[]) => {
-    //   this.courses = data;
-    // })
+  }
+
+  addCart(){
+    this.cartService.addtoCart(this.course);
+    this.router.navigateByUrl('/cart');
   }
 
 }
