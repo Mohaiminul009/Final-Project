@@ -40,7 +40,7 @@ export class ACourseViewComponent implements OnInit{
     })
   };
 
-  alertConfirmation(id:number){
+  alertConfirmation(){
     Swal.fire({
       title: 'Are you sure?',
       text: "You won't be able to revert this!",

@@ -4,11 +4,11 @@ import { AuthService } from '../Service/auth.service';
 import { StorageService } from '../Service/storage.service';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: 'app-login-copy',
+  templateUrl: './login-copy.component.html',
+  styleUrls: ['./login-copy.component.css']
 })
-export class LoginComponent {
+export class LoginCopyComponent {
   form: any = {
     username: null,
     password: null
@@ -38,7 +38,7 @@ export class LoginComponent {
         this.isLoggedIn = true;
         this.roles = this.storageService.getUser().roles;
         alert("Successfully sign in!")
-        this.router.navigateByUrl("/home")
+        this.router.navigateByUrl("/paymentmethod")
         // this.reloadPage();
       },
       error: err => {

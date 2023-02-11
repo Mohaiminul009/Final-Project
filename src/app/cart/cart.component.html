@@ -5,7 +5,7 @@
 <div class="container-fluid" id="src1">
     <div class="container p-5" style="width:60%;">
         <div>
-            <ul>
+            <ul style="list-style: none;">
                 <li *ngFor="let cartitem of cart.items">
                     <div class="row p-3 bg-white" id="cart" style="border-radius: 20px; border: 1px solid dodgerblue;">
                         <div class="col-md-2">
@@ -34,13 +34,15 @@
                             <h4 style="color:DodgerBlue; border-radius: 10%;">{{cartitem.course.coursePrice}} Taka</h4>
                         </div>
                         <div class="col-md-2">
-                            <a href="login" class="btn btn-outline-success" style=" font-size: 15px;">Buy</a>
+                            <a class="btn btn-outline-success" style=" font-size: 15px;" (click)="toPayment()">Buy</a>
                             <a class="btn btn-danger" style="border: none; font-size: 15px; margin-left: 10px;" (click)="removeCart(cartitem)"><i class="fa-solid fa-circle-xmark"></i></a>
                         </div>
                     </div>
                     <br>
                 </li>
             </ul>
+            <hr>
+            <p style="float: right;">Total cost : <span style="font-weight: 500;">{{totalPrice}}</span></p>
         </div>
     </div>
 </div>

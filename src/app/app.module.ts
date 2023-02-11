@@ -29,6 +29,8 @@ import { CartComponent } from './cart/cart.component';
 import { AcoursesEditComponent } from './acourses-edit/acourses-edit.component';
 import { InstructorseditComponent } from './instructorsedit/instructorsedit.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { PaymentMethodComponent } from './payment-method/payment-method.component';
+import { LoginCopyComponent } from './login-copy/login-copy.component';
 
 
 @NgModule({
@@ -57,7 +59,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     CartComponent,
     AcoursesEditComponent,
     InstructorseditComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    PaymentMethodComponent,
+    LoginCopyComponent
   ],
   imports: [
     BrowserModule,

@@ -45,10 +45,10 @@ export class CartService {
   }
 
   private setCartToLocalStorage(): void{
-    // this.cart.totalPrice = this.cart.items.reduce((prevSum, currentItem) =>
-    // prevSum + currentItem.courseCprice, 0);
-    // this.cart.totalCount = this.cart.items.reduce((prevSum, currentItem) => 
-    // prevSum + currentItem.courseCid, 0);
+    this.cart.totalPrice = this.cart.items.reduce((prevSum, currentItem) =>
+    prevSum + currentItem.courseCprice, 0);
+    this.cart.totalCount = this.cart.items.reduce((prevSum, currentItem) => 
+    prevSum + currentItem.courseCid, 0);
     const cartJson = JSON.stringify(this.cart);
     localStorage.setItem('Cart', cartJson);
     this.cartSubject.next(this.cart);

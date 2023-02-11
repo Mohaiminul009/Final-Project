@@ -18,7 +18,9 @@ import { InstructorEditComponent } from './instructor-edit/instructor-edit.compo
 import { InstructorFormComponent } from './instructor-form/instructor-form.component';
 import { InstructorComponent } from './instructor/instructor.component';
 import { InstructorseditComponent } from './instructorsedit/instructorsedit.component';
+import { LoginCopyComponent } from './login-copy/login-copy.component';
 import { LoginComponent } from './login/login.component';
+import { PaymentMethodComponent } from './payment-method/payment-method.component';
 import { RegisterComponent } from './register/register.component';
 import { SearchComponent } from './search/search.component';
 
@@ -35,6 +37,8 @@ const routes: Routes = [
   {path:"coursedetails/:uCourseId", component:CourseDetailsComponent},
   {path:"instructorform", component:InstructorFormComponent},
   {path:"cart", component:CartComponent},
+  {path:"paymentmethod", component:PaymentMethodComponent},
+  {path:"loginforpay", component:LoginCopyComponent},
   {path:"adashboard", component:ADashboardComponent,
   children: [
   {path:'', component:DashboardComponent},

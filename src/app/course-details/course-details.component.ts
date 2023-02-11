@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Course } from '../Model/course.model';
 import { CartService } from '../Service/cart.service';
 import { CourseService } from '../Service/course.service';
+import { StorageService } from '../Service/storage.service';
 
 @Component({
   selector: 'app-course-details',
@@ -13,9 +14,12 @@ export class CourseDetailsComponent implements OnInit{
 
   course_id!: number;
   course!: Course;
+  isLoggedIn = false;
+  roles: string[] = [];
 
   constructor(public courseService: CourseService,
     private cartService: CartService,
+    private storageService: StorageService,
     private router: Router,
     private route: ActivatedRoute){}
 
@@ -25,6 +29,16 @@ export class CourseDetailsComponent implements OnInit{
       this.course = data;
     })
 
+  }
+
+  toPayment(){
+    if (this.storageService.isLoggedIn()) {
+      this.isLoggedIn = true;
+      this.roles = this.storageService.getUser().roles;
+      this.router.navigateByUrl('/paymentmethod');
+    } else{
+      this.router.navigateByUrl('/loginforpay');
+    }
   }
 
   addCart(){

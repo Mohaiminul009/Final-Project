@@ -26,9 +26,9 @@ export class HeaderComponent implements OnInit{
     private cartService: CartService,
     private eventBusService: EventBusService
   ) {
-    cartService.getCartObservable().subscribe((newcart)=>{
-      this.cartQuantity = newcart.totalCount;
-    })
+    // cartService.getCartObservable().subscribe((newcart)=>{
+    //   this.cartQuantity = newcart.totalCount;
+    // })
   }
 
   ngOnInit(): void {
