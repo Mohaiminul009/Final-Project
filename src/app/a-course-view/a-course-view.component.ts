@@ -5,6 +5,7 @@ import Swal from 'sweetalert2';
 import { Course } from '../Model/course.model';
 import { CourseService } from '../Service/course.service';
 
+
 @Component({
   selector: 'app-a-course-view',
   templateUrl: './a-course-view.component.html',
@@ -28,11 +29,11 @@ export class ACourseViewComponent implements OnInit{
     })
   }
 
-  delete(id:number){
-    this.courseCategoryService.delete(id).subscribe(res => {
-         this.categories = this.categories.filter(item => item.course_cat_id !== id);
-    })
-  };
+  // delete(id:number){
+  //   this.courseCategoryService.delete(id).subscribe(res => {
+  //        this.categories = this.categories.filter(item => item.course_cat_id !== id);
+  //   })
+  // };
 
   delete2(id:number){
     this.courseService.delete(id).subscribe(res => {
@@ -40,24 +41,15 @@ export class ACourseViewComponent implements OnInit{
     })
   };
 
-  alertConfirmation(){
-    Swal.fire({
-      title: 'Are you sure?',
-      text: "You won't be able to revert this!",
-      icon: 'warning',
-      showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, delete it!'
-    }).then((result) => {
-      if (result.isConfirmed) {
+  delete(id: number){
+        this.courseCategoryService.delete(id).subscribe(res => {
+              this.categories = this.categories.filter(item => item.course_cat_id !== id);
+            })
         Swal.fire(
           'Deleted!',
           'Your file has been deleted.',
           'success'
         )
-      }
-    })
   }
 
 }

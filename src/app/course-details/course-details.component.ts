@@ -35,9 +35,11 @@ export class CourseDetailsComponent implements OnInit{
     if (this.storageService.isLoggedIn()) {
       this.isLoggedIn = true;
       this.roles = this.storageService.getUser().roles;
-      this.router.navigateByUrl('/paymentmethod');
+ 
+      console.log(this.course.courseName + "**********course-details*******");
+      this.router.navigateByUrl('/paymentmethod/'+ this.course.course_id);
     } else{
-      this.router.navigateByUrl('/loginforpay');
+      this.router.navigateByUrl('/loginforpay/'+ this.course.course_id);
     }
   }
 

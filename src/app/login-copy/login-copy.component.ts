@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Course } from '../Model/course.model';
 import { AuthService } from '../Service/auth.service';
+import { CourseService } from '../Service/course.service';
 import { StorageService } from '../Service/storage.service';
 
 @Component({
@@ -18,13 +20,22 @@ export class LoginCopyComponent {
   errorMessage = '';
   roles: string[] = [];
 
-  constructor(private authService: AuthService, private storageService: StorageService, public router: Router) { }
+  course_id!:number;
+  course!: Course;
+
+  constructor(private authService: AuthService, private storageService: StorageService, public router: Router, private courseService: CourseService, public route: ActivatedRoute) { }
 
   ngOnInit(): void {
     if (this.storageService.isLoggedIn()) {
       this.isLoggedIn = true;
       this.roles = this.storageService.getUser().roles;
     }
+
+    this.course_id = this.route.snapshot.params['courseId'];
+    this.courseService.getById(this.course_id).subscribe((data: Course)=>{
+      this.course = data;
+      console.log(this.course.courseName + "************login-copy**********");
+    });
   }
 
   onSubmit(): void {

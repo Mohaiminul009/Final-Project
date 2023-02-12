@@ -28,26 +28,29 @@ export class PaymentMethodComponent implements OnInit{
 
   ngOnInit(): void {
     this.course_id = this.route.snapshot.params['purchaseCourseId'];
+    console.log("ID --- -purchaseCourseId",  this.course_id)
     this.courseService.getById(this.course_id).subscribe((data: Course)=>{
       this.course = data;
+      console.log("Course--",  this.course)
+      console.log(this.course.courseName + "************payment-method**********");
     })
 
-    this.form = new FormGroup({
-      purchase_course_id: new FormControl(this.course.course_id, [Validators.required]),
-      purchaseCourseName: new FormControl(this.course.courseName, [Validators.required]),
-      purchaseCoursePrice: new FormControl( this.course.coursePrice, [Validators.required]),
+    // this.form = new FormGroup({
+    //   purchase_course_id: new FormControl(this.course.course_id, [Validators.required]),
+    //   purchaseCourseName: new FormControl(this.course.courseName, [Validators.required]),
+    //   purchaseCoursePrice: new FormControl( this.course.coursePrice, [Validators.required]),
 
-      purchseCourseCountry: new FormControl('', [Validators.required]),
-      purchseCourseAccountType: new FormControl('', [Validators.required]),
-      purchseCourseUserName: new FormControl('', [Validators.required]),
-      purchseCourseAccountNo: new FormControl('', [Validators.required]),
-      purchseCoursePayment: new FormControl('', [Validators.required]),
-      purchseCourseTime: new FormControl('', [Validators.required])
-    })
+    //   purchseCourseCountry: new FormControl('', [Validators.required]),
+    //   purchseCourseAccountType: new FormControl('', [Validators.required]),
+    //   purchseCourseUserName: new FormControl('', [Validators.required]),
+    //   purchseCourseAccountNo: new FormControl('', [Validators.required]),
+    //   purchseCoursePayment: new FormControl('', [Validators.required]),
+    //   purchseCourseTime: new FormControl('', [Validators.required])
+    // })
+
   }
 
   submit(){
-    console.log(this.form.value);
     this.purchaseCourseService.create(this.form.value).subscribe((res:any) => {
       alert("Purchase Complete!")
     })

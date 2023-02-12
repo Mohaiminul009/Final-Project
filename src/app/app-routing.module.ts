@@ -37,8 +37,8 @@ const routes: Routes = [
   {path:"coursedetails/:uCourseId", component:CourseDetailsComponent},
   {path:"instructorform", component:InstructorFormComponent},
   {path:"cart", component:CartComponent},
-  {path:"paymentmethod", component:PaymentMethodComponent},
-  {path:"loginforpay", component:LoginCopyComponent},
+  {path:"paymentmethod/:purchaseCourseId", component:PaymentMethodComponent},
+  {path:"loginforpay/:courseId", component:LoginCopyComponent},
   {path:"adashboard", component:ADashboardComponent,
   children: [
   {path:'', component:DashboardComponent},
