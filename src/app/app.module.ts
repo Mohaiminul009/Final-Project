@@ -31,6 +31,8 @@ import { InstructorseditComponent } from './instructorsedit/instructorsedit.comp
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { PaymentMethodComponent } from './payment-method/payment-method.component';
 import { LoginCopyComponent } from './login-copy/login-copy.component';
+import { TransactionComponent } from './transaction/transaction.component';
+import { MessageComponent } from './message/message.component';
 
 
 @NgModule({
@@ -61,7 +63,9 @@ import { LoginCopyComponent } from './login-copy/login-copy.component';
     InstructorseditComponent,
     PageNotFoundComponent,
     PaymentMethodComponent,
-    LoginCopyComponent
+    LoginCopyComponent,
+    TransactionComponent,
+    MessageComponent
   ],
   imports: [
     BrowserModule,

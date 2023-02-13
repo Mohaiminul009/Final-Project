@@ -1,0 +1,60 @@
+<div class="" style="margin-top: 100px; margin-left: 20px; width: 100%; background: white; padding: 20px;">
+    <h3 class="text-center" style="color: #191970;">Course Transaction Data</h3>
+    <br>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Course ID</th>
+                <th>Course Name</th>
+                <th>Price</th>
+                <th>User ID</th>
+                <th>Receive Payment</th>
+                <th>Account Type</th>
+                <th>Account No</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let purchaseCourse of purchaseCourses">
+                <td><a href="" style="text-decoration: none;">{{purchaseCourse.pCourseId}}</a></td>
+                <td>{{purchaseCourse.purchaseCourseName}}</td>
+                <td>{{purchaseCourse.purchaseCoursePrice}}</td>
+                <td>{{purchaseCourse.purchaseCourseUserName}}</td>
+                <td>{{purchaseCourse.purchaseCoursePayment}}</td>
+                <td>{{purchaseCourse.purchaseCourseAccountType}}</td>
+                <td>{{purchaseCourse.purchaseCourseUserAccount}}</td>
+                <td>{{purchaseCourse.purchaseCourseTime}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <form>
+                    <div class="row">
+                        <div class="col-md-4" style="margin-top: 30px;"><label>Course Name</label></div>
+                        <div class="col-md-6"><textarea name="" id="" cols="20" rows="3"></textarea></div>
+                        <div class="col-md-2" style="margin-top: 30px;"><button style="border: none;"><i class="fa-solid fa-arrows-rotate"></i></button></div>
+                    </div> 
+                </form>
+            </div>
+            <div class="col-md-4">
+                <form>
+                    <div class="row">
+                        <div class="col-md-6" style="margin-top: 30px;"><label style="float: right;">Total Sale</label></div>
+                        <div class="col-md-6" style="margin-top: 30px;"><input type="text"></div>
+                    </div> 
+                </form>
+            </div>
+            <div class="col-md-4">
+                <form>
+                    <div class="row">
+                        <div class="col-md-6" style="margin-top: 30px;"><label style="float: right;">Total Amount</label></div>
+                        <div class="col-md-6" style="margin-top: 30px;"style="margin-top: 30px;"><input type="text"></div>
+                    </div> 
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

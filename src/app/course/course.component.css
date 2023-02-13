@@ -15,3 +15,7 @@
     margin-bottom: 20px;
     width: 75%;
 }
+#corcat li a:hover{
+    background: DodgerBlue;
+    color: aliceblue;
+}

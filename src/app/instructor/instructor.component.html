@@ -62,7 +62,7 @@
                 <td>{{instructor.instructorPic}}</td>
                 <td>
                     <a href="#" style="color: violet; text-decoration: none;" [routerLink]="['/adashboard/', 'instructorsedit', instructor.instructor_id]"><i class="fa-solid fa-pen-to-square"></i> Edit</a>
-                    <a href="adashboard/instructor" style="margin-left: 40px; color: Tomato; text-decoration: none;" (click)="delete2(instructor.instructor_id)"><i class="fa-solid fa-trash"></i></a>
+                    <a style="margin-left: 40px; color: Tomato; text-decoration: none;" (click)="delete2(instructor.instructor_id)"><i class="fa-solid fa-trash"></i></a>
                 </td>
             </tr>
         </tbody>

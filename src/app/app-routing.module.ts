@@ -20,9 +20,11 @@ import { InstructorComponent } from './instructor/instructor.component';
 import { InstructorseditComponent } from './instructorsedit/instructorsedit.component';
 import { LoginCopyComponent } from './login-copy/login-copy.component';
 import { LoginComponent } from './login/login.component';
+import { MessageComponent } from './message/message.component';
 import { PaymentMethodComponent } from './payment-method/payment-method.component';
 import { RegisterComponent } from './register/register.component';
 import { SearchComponent } from './search/search.component';
+import { TransactionComponent } from './transaction/transaction.component';
 
 const routes: Routes = [
   {path:"", redirectTo:"/home", pathMatch:"full"},
@@ -49,7 +51,9 @@ const routes: Routes = [
   {path:"aclassroom", component:AClassroomComponent},
   {path:"instructor", component:InstructorComponent},
   {path:"instructoredit/:applicantId", component:InstructorEditComponent},
-  {path:"instructorsedit/:instructorId", component:InstructorseditComponent}
+  {path:"instructorsedit/:instructorId", component:InstructorseditComponent},
+  {path:"transaction", component:TransactionComponent},
+  {path:"message", component:MessageComponent}
   ]},
 ];
 

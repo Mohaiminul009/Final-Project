@@ -49,8 +49,9 @@ export class LoginCopyComponent {
         this.isLoggedIn = true;
         this.roles = this.storageService.getUser().roles;
         alert("Successfully sign in!")
-        this.router.navigateByUrl("/paymentmethod")
         // this.reloadPage();
+        this.router.navigateByUrl('/paymentmethod/' + this.course.course_id);
+        
       },
       error: err => {
         this.errorMessage = err.error.message;

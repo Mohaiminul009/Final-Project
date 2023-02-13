@@ -42,14 +42,9 @@ export class ACourseViewComponent implements OnInit{
   };
 
   delete(id: number){
-        this.courseCategoryService.delete(id).subscribe(res => {
-              this.categories = this.categories.filter(item => item.course_cat_id !== id);
-            })
-        Swal.fire(
-          'Deleted!',
-          'Your file has been deleted.',
-          'success'
-        )
+    this.courseCategoryService.delete(id).subscribe(res => {
+          this.categories = this.categories.filter(item => item.course_cat_id !== id);
+    })
   }
 
 }

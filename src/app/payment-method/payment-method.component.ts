@@ -16,10 +16,10 @@ export class PaymentMethodComponent implements OnInit{
      private courseService: CourseService,
       public route: ActivatedRoute,
        public router: Router){
-    setInterval(() => {this.today = Date.now()}, 1);
+    
   }
 
-  today: number = Date.now();
+  myDate = new Date();
   btn1:boolean = false;
   btn2:boolean = true;
   course!:Course;
@@ -35,25 +35,32 @@ export class PaymentMethodComponent implements OnInit{
       console.log(this.course.courseName + "************payment-method**********");
     })
 
-    // this.form = new FormGroup({
-    //   purchase_course_id: new FormControl(this.course.course_id, [Validators.required]),
-    //   purchaseCourseName: new FormControl(this.course.courseName, [Validators.required]),
-    //   purchaseCoursePrice: new FormControl( this.course.coursePrice, [Validators.required]),
+    this.form = new FormGroup({
+      pCourseId: new FormControl('', [Validators.required]),
+      purchaseCourseName: new FormControl('', [Validators.required]),
+      purchaseCoursePrice: new FormControl('', [Validators.required]),
 
-    //   purchseCourseCountry: new FormControl('', [Validators.required]),
-    //   purchseCourseAccountType: new FormControl('', [Validators.required]),
-    //   purchseCourseUserName: new FormControl('', [Validators.required]),
-    //   purchseCourseAccountNo: new FormControl('', [Validators.required]),
-    //   purchseCoursePayment: new FormControl('', [Validators.required]),
-    //   purchseCourseTime: new FormControl('', [Validators.required])
-    // })
+      purchaseCourseCountry: new FormControl('', [Validators.required]),
+      purchaseCourseAccountType: new FormControl('', [Validators.required]),
+      purchaseCourseUserName: new FormControl('', [Validators.required]),
+      purchaseCourseUserAccount: new FormControl('', [Validators.required]),
+      purchaseCoursePayment: new FormControl('', [Validators.required]),
+      purchaseCourseTime: new FormControl('', [Validators.required])
+    })
 
   }
 
   submit(){
-    this.purchaseCourseService.create(this.form.value).subscribe((res:any) => {
-      alert("Purchase Complete!")
-    })
+    const price = this.form.get('purchaseCoursePrice')?.value;
+  const pay = this.form.get('purchaseCoursePayment')?.value;
+
+    if(price == pay){
+      this.purchaseCourseService.create(this.form.value).subscribe((res:any) => {
+        alert("Purchase Complete!")
+      })
+    }else{
+      alert("Wrong payment!");
+    }
   }
 
   btn1Function(){

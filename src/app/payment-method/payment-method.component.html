@@ -7,15 +7,15 @@
             <h4 class="text-light">Payment Method</h4>
             <hr class="text-light">
             <div class="card card-container" style="background: aliceblue; padding: 10px;">
-                <button class="btn btn-outline-secondary" (click)="btn1Function()">Mobile Banking <span style="float: right;"><img style="height: 30px; width: 50px;" src="../../assets/images/Bkash-logo.png" alt=""></span>  <span style="float: right;"><img style="height: 30px; width: 50px;" src="../../assets/images/Nagad-Logo.wine.png" alt=""></span></button>
-                <button class="btn btn-outline-secondary" style="margin-top: 10px;" (click)="btn2Function()">Credit/Debit Card <span style="float: right;"><img style="height: 25px; width: 50px;" src="../../assets/images/discover.png" alt=""></span> <span style="float: right;"><img style="height: 25px; width: 50px;" src="../../assets/images/mastercard.png" alt=""></span> <span style="float: right;"><img style="height: 25px; width: 50px;" src="../../assets/images/visa.jpg" alt=""></span></button>
+                <button class="btn btn-secondary"  (click)="btn1Function()">Mobile Banking <span style="float: right;"><img style="height: 30px; width: 50px;" src="../../assets/images/Bkash-logo.png" alt=""></span>  <span style="float: right;"><img style="height: 30px; width: 50px;" src="../../assets/images/Nagad-Logo.wine.png" alt=""></span></button>
+                <button class="btn btn-secondary" style="margin-top: 10px;" (click)="btn2Function()">Credit/Debit Card <span style="float: right;"><img style="height: 25px; width: 50px;" src="../../assets/images/discover.png" alt=""></span> <span style="float: right;"><img style="height: 25px; width: 50px;" src="../../assets/images/mastercard.png" alt=""></span> <span style="float: right;"><img style="height: 25px; width: 50px;" src="../../assets/images/visa.jpg" alt=""></span></button>
                 <br>
                 <form *ngIf="btn1" [formGroup]="form" (ngSubmit)="submit()">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-6">
-                                <select formControlName="purchseCourseCountry" class="form-control">
-                                    <option hidden>Country</option>
+                                <label>Country</label>
+                                <select formControlName="purchaseCourseCountry" class="form-control">
                                     <option value="bangladesh">Bangladesh</option>
                                     <option value="india">India</option>
                                     <option value="pakistan">Pakistan</option>
@@ -23,25 +23,39 @@
                                 </select>
                             </div>
                             <div class="col-md-6">
-                                <select formControlName="purchseCourseAccountType" class="form-control">
-                                    <option hidden>Account Type</option>
+                                <label>Account Type</label>
+                                <select formControlName="purchaseCourseAccountType" class="form-control">
                                     <option value="bkash">Bkash</option>
                                     <option value="nagad">Nagad</option>
                                 </select>
                             </div>
                         </div>
+                        <div class="row" hidden>
+                            <div class="col-md-12">
+                                <label>Course Id</label>
+                                <input formControlName="pCourseId" class="form-control" type="text" [(ngModel)]=this.course.course_id>
+                            </div>
+                            <div class="col-md-12">
+                                <label>Course Name</label>
+                                <input formControlName="purchaseCourseName" class="form-control" type="text" [(ngModel)]=this.course.courseName>
+                            </div>
+                            <div class="col-md-12">
+                                <label>Course Price</label>
+                                <input formControlName="purchaseCoursePrice" class="form-control" type="text" [(ngModel)]=this.course.coursePrice>
+                            </div>
+                        </div>
                         <div class="row">
                             <div class="col-md-12">
                                 <label>User ID</label>
-                                <input formControlName="purchseCourseUserName" class="form-control" type="text">
+                                <input formControlName="purchaseCourseUserName" class="form-control" type="text">
                             </div>
                             <div class="col-md-12">
                                 <label>Account No.</label>
-                                <input formControlName="purchseCourseAccountNo" class="form-control" type="text">
+                                <input formControlName="purchaseCourseUserAccount" class="form-control" type="text">
                             </div>
                             <div class="col-md-12">
                                 <label>Amount</label>
-                                <input formControlName="purchseCoursePayment" class="form-control" type="text">
+                                <input formControlName="purchaseCoursePayment" class="form-control" type="text">
                             </div>
                             <div class="col-md-6">
                                 <label>Pin</label>
@@ -49,7 +63,7 @@
                             </div>
                             <div class="col-md-6">
                                 <label>Current Time</label>
-                                <input formControlName="purchseCourseTime" class="form-control" type="text" value="{{today | date:'fullDate'}} {{today | date:'h:mm:ss a'}}">
+                                <input formControlName="purchaseCourseTime" class="form-control" type="text" [(ngModel)]= myDate>
                             </div>
                         </div>
                         <br>
