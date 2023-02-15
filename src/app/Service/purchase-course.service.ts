@@ -55,14 +55,15 @@ export class PurchaseCourseService {
   }
 
   countAll(id: number): Observable<any> {
-    return this.httpClient.get(this.api + '/getcount/' + id)
+    return this.httpClient.get(this.api + '/getcount/' + id, {responseType: "text"})
     .pipe(
       catchError(this.errorHandler)
     )
   }
 
   totalPrice(id: number): Observable<any> {
-    return this.httpClient.get(this.api + '/getprice/' + id)
+    console.log('id-',id)
+    return this.httpClient.get(this.api + '/getprice/' + id, {responseType: "text"})
     .pipe(
       catchError(this.errorHandler)
     )

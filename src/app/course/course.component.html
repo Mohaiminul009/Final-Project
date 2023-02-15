@@ -1,19 +1,19 @@
 <app-header></app-header>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-2" id="sidebar">
-            <div class="nav">
-                <ul id="corcat">
-                    <li class="nav-item"><a class="btn btn-light" href="" style="font-weight: 500;">Graphics Design</a></li>
-                    <li class="nav-item"><a class="btn btn-light" href="" style="font-weight: 500;">Web Development</a></li>
-                    <li class="nav-item"><a class="btn btn-light" href="" style="font-weight: 500;">Web Design</a></li>
-                    <li class="nav-item"><a class="btn btn-light" href="" style="font-weight: 500;">Office Application</a></li>
-                </ul>
-            </div>
+        <div class="col-md-12" id="sidebar">
+            <nav class="nav">
+                <button class="nav-link btn btn-light" style="font-weight: 500; margin-left: 150px; padding: 20px;" (click)="click1()">Graphics Design</button>
+                <button class="nav-link btn btn-light" style="font-weight: 500; margin-left: 100px;" (click)="click2()">Web Development</button>
+                <button class="nav-link btn btn-light" style="font-weight: 500; margin-left: 100px;" (click)="click3()">Web Design</button>
+                <button class="nav-link btn btn-light" style="font-weight: 500; margin-left: 100px;" (click)="click4()">Office Application</button>
+            </nav>
         </div>
 
+        <div class="col-md-1"></div>
+
         <div class="col-md-10">
-            <div class="row mt-5"  *ngFor="let course of courses">
+            <div class="row mt-5 mb-3" style="background: aliceblue;"  *ngFor="let course of courses">
                 <div class="col-md-2">
                     <img src="../../assets/images/{{course.coursePic}}" alt="" style="height: 120px; width: 90%; border-radius: 10px;">
                 </div>
@@ -35,6 +35,8 @@
                 </div>
             </div>
         </div> 
+
+        <div class="col-md-1"></div>
     </div>
 </div> 
 <app-footer></app-footer>

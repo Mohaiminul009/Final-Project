@@ -28,9 +28,13 @@ export class TransactionComponent implements OnInit{
 
   clickOn(id: number){
     this.purchaseCourseService.countAll(id).subscribe((data) => {
-      this.countData = data})
-    this.purchaseCourseService.totalPrice(id).subscribe((data) => {
-      this.priceData = data})
+      this.countData = data
+    console.log('countAll',this.countData)
+  })
+    this.purchaseCourseService.totalPrice(id).subscribe((res) => {
+      this.priceData = res
+      console.log('totalPrice',this.priceData)
+    })
   }
 
 }

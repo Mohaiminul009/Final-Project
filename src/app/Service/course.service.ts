@@ -53,6 +53,13 @@ export class CourseService {
     )
   }
 
+  getByCatName(cat:string): Observable<any> {
+    return this.httpClient.get(this.api + '/getbycat/' + cat)
+    .pipe(
+      catchError(this.errorHandler)
+    )
+  }
+
   errorHandler(error:any) {
     let errorMessage = '';
     if(error.error instanceof ErrorEvent) {
