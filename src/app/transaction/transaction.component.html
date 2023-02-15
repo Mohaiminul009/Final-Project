@@ -5,25 +5,24 @@
         <thead>
             <tr>
                 <th>Course ID</th>
-                <th>Course Name</th>
+                <th>Category</th>
+                <th>Name</th>
+                <th>Instructor Name</th>
                 <th>Price</th>
-                <th>User ID</th>
-                <th>Receive Payment</th>
-                <th>Account Type</th>
-                <th>Account No</th>
-                <th>Time</th>
+                <th>Publish Date</th>
+                <th>Execute</th>
+
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let purchaseCourse of purchaseCourses">
-                <td><a href="" style="text-decoration: none;">{{purchaseCourse.pCourseId}}</a></td>
-                <td>{{purchaseCourse.purchaseCourseName}}</td>
-                <td>{{purchaseCourse.purchaseCoursePrice}}</td>
-                <td>{{purchaseCourse.purchaseCourseUserName}}</td>
-                <td>{{purchaseCourse.purchaseCoursePayment}}</td>
-                <td>{{purchaseCourse.purchaseCourseAccountType}}</td>
-                <td>{{purchaseCourse.purchaseCourseUserAccount}}</td>
-                <td>{{purchaseCourse.purchaseCourseTime}}</td>
+            <tr *ngFor="let course of courses">
+                <td>{{course.course_id}}</td>
+                <td>{{course.courseCatName2}}</td>
+                <td>{{course.courseName}}</td>
+                <td>{{course.instructorName2}}</td>
+                <td>{{course.coursePrice}}</td>
+                <td>{{course.courseUploadDate}}</td>
+                <td><button class="btn btn-secondary" (click)="clickOn(course.course_id)"><i class="fa-solid fa-arrows-rotate"></i></button></td>
             </tr>
         </tbody>
     </table>
@@ -31,27 +30,21 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4">
+
+            </div>
+            <div class="col-md-4">
                 <form>
                     <div class="row">
-                        <div class="col-md-4" style="margin-top: 30px;"><label>Course Name</label></div>
-                        <div class="col-md-6"><textarea name="" id="" cols="20" rows="3"></textarea></div>
-                        <div class="col-md-2" style="margin-top: 30px;"><button style="border: none;"><i class="fa-solid fa-arrows-rotate"></i></button></div>
+                        <div class="col-md-6" style="margin-top: 20px;"><label style="float: right;">Total Sale Quantity</label></div>
+                        <div class="col-md-6" style="margin-top: 20px;"><input type="text" [(ngModel)]=this.countData></div>
                     </div> 
                 </form>
             </div>
             <div class="col-md-4">
                 <form>
                     <div class="row">
-                        <div class="col-md-6" style="margin-top: 30px;"><label style="float: right;">Total Sale</label></div>
-                        <div class="col-md-6" style="margin-top: 30px;"><input type="text"></div>
-                    </div> 
-                </form>
-            </div>
-            <div class="col-md-4">
-                <form>
-                    <div class="row">
-                        <div class="col-md-6" style="margin-top: 30px;"><label style="float: right;">Total Amount</label></div>
-                        <div class="col-md-6" style="margin-top: 30px;"style="margin-top: 30px;"><input type="text"></div>
+                        <div class="col-md-6" style="margin-top: 20px;"><label style="float: right;">Total Amount</label></div>
+                        <div class="col-md-6" style="margin-top: 20px;"><input type="text" [(ngModel)]=this.priceData></div>
                     </div> 
                 </form>
             </div>

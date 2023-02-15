@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PurchaseCourse } from '../Model/purchase-course.model';
+import { Course } from '../Model/course.model';
+import { CourseService } from '../Service/course.service';
 import { PurchaseCourseService } from '../Service/purchase-course.service';
 
 @Component({
@@ -9,18 +10,27 @@ import { PurchaseCourseService } from '../Service/purchase-course.service';
 })
 export class TransactionComponent implements OnInit{
 
-  purchaseCourses: PurchaseCourse[] = [];
+  courses: Course[] = [];
+  countData!: number;
+  priceData!: number;
 
-  constructor(private purchaseCourseService: PurchaseCourseService){}
+  constructor(private courseService: CourseService,
+    private purchaseCourseService: PurchaseCourseService){}
 
   ngOnInit(): void {
-    this.purchaseCourseService.getAll().subscribe((data: PurchaseCourse[]) => {
-      this.purchaseCourses = data;
+    this.courseService.getAll().subscribe((data: Course[]) => {
+      this.courses = data;
     })
+
+    console.log(this.countData);
+    console.log(this.priceData);
   }
 
-  clickon(){
-    
+  clickOn(id: number){
+    this.purchaseCourseService.countAll(id).subscribe((data) => {
+      this.countData = data})
+    this.purchaseCourseService.totalPrice(id).subscribe((data) => {
+      this.priceData = data})
   }
 
 }

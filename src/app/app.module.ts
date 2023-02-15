@@ -33,6 +33,7 @@ import { PaymentMethodComponent } from './payment-method/payment-method.componen
 import { LoginCopyComponent } from './login-copy/login-copy.component';
 import { TransactionComponent } from './transaction/transaction.component';
 import { MessageComponent } from './message/message.component';
+import { ABlogComponent } from './a-blog/a-blog.component';
 
 
 @NgModule({
@@ -65,7 +66,8 @@ import { MessageComponent } from './message/message.component';
     PaymentMethodComponent,
     LoginCopyComponent,
     TransactionComponent,
-    MessageComponent
+    MessageComponent,
+    ABlogComponent
   ],
   imports: [
     BrowserModule,

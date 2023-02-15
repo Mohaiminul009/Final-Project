@@ -54,6 +54,20 @@ export class PurchaseCourseService {
     )
   }
 
+  countAll(id: number): Observable<any> {
+    return this.httpClient.get(this.api + '/getcount/' + id)
+    .pipe(
+      catchError(this.errorHandler)
+    )
+  }
+
+  totalPrice(id: number): Observable<any> {
+    return this.httpClient.get(this.api + '/getprice/' + id)
+    .pipe(
+      catchError(this.errorHandler)
+    )
+  }
+
   errorHandler(error:any) {
     let errorMessage = '';
     if(error.error instanceof ErrorEvent) {

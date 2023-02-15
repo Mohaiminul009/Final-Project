@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ABlogComponent } from './a-blog/a-blog.component';
 import { AClassroomComponent } from './a-classroom/a-classroom.component';
 import { ACourseEditComponent } from './a-course-edit/a-course-edit.component';
 import { ACourseViewComponent } from './a-course-view/a-course-view.component';
@@ -53,7 +54,8 @@ const routes: Routes = [
   {path:"instructoredit/:applicantId", component:InstructorEditComponent},
   {path:"instructorsedit/:instructorId", component:InstructorseditComponent},
   {path:"transaction", component:TransactionComponent},
-  {path:"message", component:MessageComponent}
+  {path:"message", component:MessageComponent},
+  {path:"ablog", component:ABlogComponent}
   ]},
 ];
 
