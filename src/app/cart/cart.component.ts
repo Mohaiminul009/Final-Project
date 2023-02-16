@@ -38,9 +38,10 @@ export class CartComponent implements OnInit{
     if (this.storageService.isLoggedIn()) {
       this.isLoggedIn = true;
       this.roles = this.storageService.getUser().roles;
-      this.router.navigateByUrl('/paymentmethod');
+      // this.router.navigateByUrl('/paymentmethod');
+      this.router.navigateByUrl('/paymentmethod/'+ this.cart.items[0].courseCid);
     } else{
-      this.router.navigateByUrl('/loginforpay');
+      this.router.navigateByUrl('/loginforpay/' + this.cart.items[0].courseCid);
     }
   }
 
