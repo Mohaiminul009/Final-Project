@@ -1,11 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Blog } from '../Model/blog.model';
+import { BlogService } from '../Service/blog.service';
 
 @Component({
   selector: 'app-blog',
   templateUrl: './blog.component.html',
   styleUrls: ['./blog.component.css']
 })
-export class BlogComponent {
+export class BlogComponent implements OnInit{
+  blogs: Blog[] = [];
+
+  constructor(private blogService: BlogService){}
+
+  ngOnInit(): void {
+    this.blogService.getAll().subscribe((data: Blog[]) => {
+      this.blogs = data;
+    })
+  }
 
 
   // click1(){

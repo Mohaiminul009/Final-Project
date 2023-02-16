@@ -34,3 +34,34 @@
     <br>
     <br>
 </div>
+
+<div class="" style="margin-top: 100px; margin-left: 20px; width: 100%; background: white; padding: 20px;">
+    <h3 class="text-center" style="color: #191970;">Blog Data</h3>
+    <br>
+    <table class="table table-striped" id="tab">
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>Name</th>
+                <th>Upload Date</th>
+                <th>User Fullname</th>
+                <th>Username</th>
+                <th>Blog Photo</th>
+                <th>Introduction</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let blog of blogs">
+                <td>{{blog.blogCategory}}</td>
+                <td>{{blog.blogName}}</td>
+                <td>{{blog.blogPublishDate}}</td>
+                <td>{{blog.blogPublisherName}}</td>
+                <td>{{blog.blogPublisherUsername}}</td>
+                <td>{{blog.blogPhoto}}</td>
+                <td>{{blog.blogIntroduction}}</td>
+                <td>{{blog.blogDescription}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

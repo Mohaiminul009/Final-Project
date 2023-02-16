@@ -8,7 +8,9 @@ import { ACourseComponent } from './a-course/a-course.component';
 import { ADashboardComponent } from './a-dashboard/a-dashboard.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { AcoursesEditComponent } from './acourses-edit/acourses-edit.component';
+import { BlogDetailsComponent } from './blog-details/blog-details.component';
 import { BlogComponent } from './blog/blog.component';
+import { BlogpostViewComponent } from './blogpost-view/blogpost-view.component';
 import { CartComponent } from './cart/cart.component';
 import { ClassroomComponent } from './classroom/classroom.component';
 import { CourseDetailsComponent } from './course-details/course-details.component';
@@ -46,6 +48,7 @@ const routes: Routes = [
   {path:"loginforpay/:courseId", component:LoginCopyComponent},
   {path:"createblog", component:CreateBlogComponent},
   {path:"profile", component:ProfileComponent},
+  {path:"blogdetails/:blogId", component:BlogDetailsComponent},
   {path:"adashboard", component:ADashboardComponent,
   children: [
   {path:'', component:DashboardComponent},
@@ -60,7 +63,7 @@ const routes: Routes = [
   {path:"transaction", component:TransactionComponent},
   {path:"message", component:MessageComponent},
   {path:"ablog", component:ABlogComponent},
-  {path:"blogpostview/:blogpostId", component:InstructorseditComponent},
+  {path:"blogpostview/:blogpostId", component:BlogpostViewComponent},
   ]},
 ];
 

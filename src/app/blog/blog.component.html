@@ -29,11 +29,20 @@
     </div>
 </div>
 <br>
-<div class="container-fluid">
-    <div class="row">
+<div class="container-fluid" style="margin-bottom: 20px;">
+    <div class="row" *ngFor="let blog of blogs" style="margin-top: 50px;">
         <div class="col-md-2"></div>
-        <div class="col-md-4"></div>
-        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <img src="../../assets/images/{{blog.blogPhoto}}" alt="" style="height: 300px; width: 500px;">
+        </div>
+        <div class="col-md-4">
+            <h5>{{blog.blogName}}</h5>
+            <p style="line-height: 0; color: cornflowerblue;">{{blog.blogPublisherName}}</p>
+            <p>{{blog.blogPublishDate}}</p>
+            <br>
+            <p>{{blog.blogIntroduction}}</p>
+            <button style="background: midnightblue; color: white;" [routerLink]="['/blogdetails/', blog.blog_id]">Read more</button>
+        </div>
         <div class="col-md-2"></div>
     </div>
 </div>

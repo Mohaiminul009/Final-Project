@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BlogPost } from '../Model/blog-post.model';
+import { Blog } from '../Model/blog.model';
+import { BlogService } from '../Service/blog.service';
 import { BlogpostService } from '../Service/blogpost.service';
 
 @Component({
@@ -9,12 +11,18 @@ import { BlogpostService } from '../Service/blogpost.service';
 })
 export class ABlogComponent implements OnInit{
   blogposts: BlogPost[] = [];
+  blogs: Blog[] = [];
 
-  constructor(private blogPostService: BlogpostService){}
+  constructor(private blogPostService: BlogpostService,
+    private blogService: BlogService){}
 
   ngOnInit(): void {
     this.blogPostService.getAll().subscribe((data: BlogPost[]) => {
       this.blogposts = data;
+    })
+
+    this.blogService.getAll().subscribe((data: Blog[]) => {
+      this.blogs = data;
     })
   }
 

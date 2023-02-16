@@ -48,18 +48,6 @@ export class InstructorEditComponent implements OnInit{
       instructorWorkplace: new FormControl('', [Validators.required]),
       instructorPic: new FormControl('', [Validators.required])
     });
-
-    // this.form1 = new FormGroup({
-    //   instructorName: new FormControl('', [Validators.required]),
-    //   instructorUsername: new FormControl('', [Validators.required]),
-    //   instructorPassword: new FormControl('', [Validators.required]),
-    //   instructorEmail: new FormControl('', [Validators.required]),
-    //   instructorPhone: new FormControl('', [Validators.required]),
-    //   instructorNid: new FormControl('', [Validators.required]),
-    //   instructorDesignation: new FormControl('', [Validators.required]),
-    //   instructorWorkplace: new FormControl('', [Validators.required]),
-    //   instructorPic: new FormControl('', [Validators.required])
-    // });
   }
 
   submit(){

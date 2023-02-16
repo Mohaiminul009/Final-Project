@@ -37,6 +37,7 @@ import { ABlogComponent } from './a-blog/a-blog.component';
 import { ProfileComponent } from './profile/profile.component';
 import { CreateBlogComponent } from './create-blog/create-blog.component';
 import { BlogpostViewComponent } from './blogpost-view/blogpost-view.component';
+import { BlogDetailsComponent } from './blog-details/blog-details.component';
 
 
 @NgModule({
@@ -73,7 +74,8 @@ import { BlogpostViewComponent } from './blogpost-view/blogpost-view.component';
     ABlogComponent,
     ProfileComponent,
     CreateBlogComponent,
-    BlogpostViewComponent
+    BlogpostViewComponent,
+    BlogDetailsComponent
   ],
   imports: [
     BrowserModule,
