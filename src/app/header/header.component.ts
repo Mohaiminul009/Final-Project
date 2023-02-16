@@ -23,7 +23,6 @@ export class HeaderComponent implements OnInit{
 
   constructor(
     private storageService: StorageService,
-    private cartService: CartService,
     private eventBusService: EventBusService
   ) {
     // cartService.getCartObservable().subscribe((newcart)=>{

@@ -40,6 +40,13 @@ export class PurchaseCourseService {
     )
   }
 
+  getByUsername(uName:string): Observable<any> {
+    return this.httpClient.get(this.api + '/getbyusername/' + uName)
+    .pipe(
+      catchError(this.errorHandler)
+    )
+  }
+
   update(id:number, course:Course): Observable<any> {
     return this.httpClient.put(this.api + '/update/' + id, JSON.stringify(course), this.httpOptions)
     .pipe( 
@@ -64,6 +71,13 @@ export class PurchaseCourseService {
   totalPrice(id: number): Observable<any> {
     console.log('id-',id)
     return this.httpClient.get(this.api + '/getprice/' + id, {responseType: "text"})
+    .pipe(
+      catchError(this.errorHandler)
+    )
+  }
+
+  total(): Observable<any> {
+    return this.httpClient.get(this.api + '/gettotal',{responseType: "text"})
     .pipe(
       catchError(this.errorHandler)
     )

@@ -34,6 +34,9 @@ import { LoginCopyComponent } from './login-copy/login-copy.component';
 import { TransactionComponent } from './transaction/transaction.component';
 import { MessageComponent } from './message/message.component';
 import { ABlogComponent } from './a-blog/a-blog.component';
+import { ProfileComponent } from './profile/profile.component';
+import { CreateBlogComponent } from './create-blog/create-blog.component';
+import { BlogpostViewComponent } from './blogpost-view/blogpost-view.component';
 
 
 @NgModule({
@@ -67,7 +70,10 @@ import { ABlogComponent } from './a-blog/a-blog.component';
     LoginCopyComponent,
     TransactionComponent,
     MessageComponent,
-    ABlogComponent
+    ABlogComponent,
+    ProfileComponent,
+    CreateBlogComponent,
+    BlogpostViewComponent
   ],
   imports: [
     BrowserModule,

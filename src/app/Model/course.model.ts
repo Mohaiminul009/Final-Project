@@ -13,4 +13,6 @@ export interface Course{
     coursePrice:number;
     courseDiscount:number;
     coursePic: string;
+    coursePdf: string;
+    courseVideo: string;
 }

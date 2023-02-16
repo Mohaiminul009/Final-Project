@@ -13,6 +13,7 @@ import { CartComponent } from './cart/cart.component';
 import { ClassroomComponent } from './classroom/classroom.component';
 import { CourseDetailsComponent } from './course-details/course-details.component';
 import { CourseComponent } from './course/course.component';
+import { CreateBlogComponent } from './create-blog/create-blog.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { InstructorEditComponent } from './instructor-edit/instructor-edit.component';
@@ -23,6 +24,7 @@ import { LoginCopyComponent } from './login-copy/login-copy.component';
 import { LoginComponent } from './login/login.component';
 import { MessageComponent } from './message/message.component';
 import { PaymentMethodComponent } from './payment-method/payment-method.component';
+import { ProfileComponent } from './profile/profile.component';
 import { RegisterComponent } from './register/register.component';
 import { SearchComponent } from './search/search.component';
 import { TransactionComponent } from './transaction/transaction.component';
@@ -42,6 +44,8 @@ const routes: Routes = [
   {path:"cart", component:CartComponent},
   {path:"paymentmethod/:purchaseCourseId", component:PaymentMethodComponent},
   {path:"loginforpay/:courseId", component:LoginCopyComponent},
+  {path:"createblog", component:CreateBlogComponent},
+  {path:"profile", component:ProfileComponent},
   {path:"adashboard", component:ADashboardComponent,
   children: [
   {path:'', component:DashboardComponent},
@@ -55,7 +59,8 @@ const routes: Routes = [
   {path:"instructorsedit/:instructorId", component:InstructorseditComponent},
   {path:"transaction", component:TransactionComponent},
   {path:"message", component:MessageComponent},
-  {path:"ablog", component:ABlogComponent}
+  {path:"ablog", component:ABlogComponent},
+  {path:"blogpostview/:blogpostId", component:InstructorseditComponent},
   ]},
 ];
 
