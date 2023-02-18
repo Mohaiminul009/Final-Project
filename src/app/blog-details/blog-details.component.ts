@@ -11,6 +11,7 @@ import { BlogService } from '../Service/blog.service';
 export class BlogDetailsComponent implements OnInit{
   blog_id!: number;
   blog!: Blog;
+  blogs: Blog[] = [];
 
   constructor(private blogService: BlogService,
     public route: ActivatedRoute){}
@@ -19,6 +20,10 @@ export class BlogDetailsComponent implements OnInit{
     this.blogService.getById(this.blog_id).subscribe((data: Blog)=>{
       this.blog = data;
     });
+
+    this.blogService.getAll().subscribe((data: Blog[]) => {
+      this.blogs = data;
+    })
   }
 
 }

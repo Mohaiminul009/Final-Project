@@ -15,15 +15,15 @@
 </div>
 <br>
 <br>
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
             <nav class="nav">
                 <h3 class="text-secondary" style="font-weight: 500; margin-left: 100px; margin-top: 20px;"><i class="fa-solid fa-bars"></i> Categories</h3>
-                <button class="nav-link btn btn-light" style="font-weight: 500; margin-left: 80px; padding: 20px; border: 1px solid Orange; color: Orange;" >Software Development</button>
-                <button class="nav-link btn btn-light" style="font-weight: 500; margin-left: 80px; padding: 20px; border: 1px solid Orange; color: Orange;" >Artificial Intelligence</button>
-                <button class="nav-link btn btn-light" style="font-weight: 500; margin-left: 80px; padding: 20px; border: 1px solid Orange; color: Orange;" >Device Technology</button>
-                <button class="nav-link btn btn-light" style="font-weight: 500; margin-left: 80px; padding: 20px; border: 1px solid Orange; color: Orange;" >Networking</button>
+                <button class="nav-link btn btn-light" style="font-weight: 500; margin-left: 50px; padding: 10px; border: 1px solid Orange; color: Orange;" >Software Development</button>
+                <button class="nav-link btn btn-light" style="font-weight: 500; margin-left: 50px; padding: 10px; border: 1px solid Orange; color: Orange;" >Artificial Intelligence</button>
+                <button class="nav-link btn btn-light" style="font-weight: 500; margin-left: 50px; padding: 10px; border: 1px solid Orange; color: Orange;" >Device Technology</button>
+                <button class="nav-link btn btn-light" style="font-weight: 500; margin-left: 50px; padding: 10px; border: 1px solid Orange; color: Orange;" >Networking</button>
             </nav>
         </div>
     </div>
@@ -33,15 +33,17 @@
     <div class="row" *ngFor="let blog of blogs" style="margin-top: 50px;">
         <div class="col-md-2"></div>
         <div class="col-md-4">
-            <img src="../../assets/images/{{blog.blogPhoto}}" alt="" style="height: 300px; width: 500px;">
+            <img src="../../assets/images/{{blog.blogPhoto}}" alt="" style="height: 100%; width: 100%;">
         </div>
         <div class="col-md-4">
-            <h5>{{blog.blogName}}</h5>
-            <p style="line-height: 0; color: cornflowerblue;">{{blog.blogPublisherName}}</p>
-            <p>{{blog.blogPublishDate}}</p>
-            <br>
-            <p>{{blog.blogIntroduction}}</p>
-            <button style="background: midnightblue; color: white;" [routerLink]="['/blogdetails/', blog.blog_id]">Read more</button>
+            <div style="box-sizing: content-box;">
+                <h5>{{blog.blogName}}</h5>
+                <p style="line-height: 0; color: orange;">{{blog.blogPublisherName}}</p>
+                <p>{{blog.blogPublishDate}}</p>
+                <br>
+                <p>{{blog.blogIntroduction}}</p>
+                <button style="background: midnightblue; color: white;" [routerLink]="['/blogdetails/', blog.blog_id]">Read more</button>
+            </div>
         </div>
         <div class="col-md-2"></div>
     </div>
